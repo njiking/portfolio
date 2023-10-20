@@ -1,19 +1,16 @@
 html {
-    background-color: #888e94;
+    background-color: chocolate ;
     font-family: sans-serif;
   }
   
   body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
+    min-width: 700px;
+    padding-left: 5rem;
+    padding-top: 1.5rem;
     line-height: 1.5;
+    text-align: center;
   }
   
-  * {
-    box-sizing: border-box;
-  }
   
   h1 {
     margin: 1rem 0;
@@ -32,7 +29,7 @@ html {
     width: 40px;
     height: 5px;
     margin-bottom: 10px;
-    background-color: #ff9776;
+    background-color: #e7c4b9;
   }
 
 
@@ -40,9 +37,10 @@ html {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #ff9776;
+  background-color: #dfc5bd;
   display: none;
   margin: 0;
+  
 }
 
 .nav-links a {
@@ -57,7 +55,7 @@ html {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: #e0c6bd;
 }
 
 .expanded {
@@ -66,18 +64,35 @@ html {
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
+    display: inline;
     background: none;
+    
+   
   }
 
   .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
+  font-size: 25px;
+  display: inline;
+  padding: 0 10rem 0 0 ;
+  color: rgb(0, 250, 125);
+  font-size: 1.2rem;
+  text-align: center;
+  
   }
   .hamburger {
     display: none;
-
+    
+}
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+a {
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #170c29;
+  text-decoration: none;
+}
 }

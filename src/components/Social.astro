@@ -1,12 +1,5 @@
 ---
+import '../styles/global.css';
 const { platform, username } = Astro.props;
 ---
 <a href={`https://www.${platform}.com/${username}`}>{platform}</a>
-<style>
-    a {
-      padding: 0.5rem 1rem;
-      color: white;
-      background-color: #170c29;
-      text-decoration: none;
-    }
-  </style>
