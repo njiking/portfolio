@@ -1,98 +1,24 @@
 html {
-    background-color: chocolate ;
-    font-family: sans-serif;
+    background-color: #5b7794;
+    font-family: 'Arial', sans-serif;
   }
   
   body {
-    min-width: 700px;
-    padding-left: 5rem;
-    padding-top: 1.5rem;
+    margin: 0 auto;
+    min-width: 80ch;
+    padding: 1rem;
     line-height: 1.5;
-    text-align: center;
   }
-  
-  
+
   h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
+    margin:  0;
+    font-size: 2rem;
   }
-  
-  * nav styles */
-
-  .hamburger {
-    padding-right: 20px;
-    cursor: pointer;
-  }
-  
-  .hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #e7c4b9;
-  }
-
-
-.nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #dfc5bd;
-  display: none;
-  margin: 0;
-  
-}
-
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-  background-color: #e0c6bd;
-}
-
-.expanded {
-  display: unset;
-}
-
-@media screen and (min-width: 636px) {
-  .nav-links {
-    display: inline;
-    background: none;
-    
-   
-  }
-
-  .nav-links a {
-  font-size: 25px;
-  display: inline;
-  padding: 0 10rem 0 0 ;
-  color: rgb(0, 250, 125);
-  font-size: 1.2rem;
-  text-align: center;
-  
-  }
-  .hamburger {
-    display: none;
-    
-}
-footer {
+.main-nav{
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-a {
-  padding: 0.5rem 1rem;
-  color: white;
-  background-color: #170c29;
+  gap: 2rem;
+  justify-content: flex-end;
+  font-size: 1.5rem;  
+  padding: 0;
   text-decoration: none;
-}
 }
