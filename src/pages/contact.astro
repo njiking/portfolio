@@ -2,14 +2,11 @@
 const pageTitle = "Contact Me";
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 ---
     <body>
-      <Navigation />
-
-        <header>
+      <Header />
             <h1>{pageTitle}</h1>
-          </header>
         
           <main>
             <form action="submit_form.php" method="post">
