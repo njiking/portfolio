@@ -1,14 +1,14 @@
 html {
+    display: block;
     background-color: #5b7794;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
+    margin: 1rem;
   }
   
   body {
-  margin: 0 auto;
+  margin: auto;
   width: 100%;
-  max-width: 80ch;
-  line-height: 1.5 
+  line-height: 1rem;
   }
 
   * {
@@ -16,8 +16,8 @@ html {
   }
 
   h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
+    margin: 1 0;
+    font-size: 2rem;
   }
 
   .hamburger {
@@ -33,19 +33,20 @@ html {
     background-color: #ff9776;
   } 
 
+  
 .nav-links{
-  text-align: center;
+  text-align:right;
   text-decoration: none;
   font-size: 1rem;
   margin-top: 5px;
   border-radius: 5rem;
   box-shadow: 2px 5px 5px whitesmoke;
   
+  
 }
 
 .nav-links a {
-  display: block;
-  text-align: center;
+  display: inline-block;
   padding: 0;
   text-decoration: none;
   text-transform: uppercase;
@@ -54,36 +55,41 @@ html {
   margin: 0;
 }
 
+.logo{
+text-align: left;
+}
+
+
 .expanded {
   display: unset;
 }
-
-.hamburger {
-  display: none;
-}
-
 .nav-links a:hover {
   color: coral;
 }
 
-
-
 @media screen and (min-width: 636px) {
 
   .nav-links {
-    margin: auto;
+    margin: 0;
     display: block;
     position: static;
     width: auto;
     background: black;
     border-radius: 5rem;
-  box-shadow: 2px 5px 5px whitesmoke;
+    box-shadow: 2px 5px 5px whitesmoke;
   }
 
   .nav-links a {
     display: inline-block;
     padding: 15px 20px;
     color: whitesmoke;
+    text-align: left;
+    position: relative;
+    letter-spacing: 0.15rem;
   }
-
+  
+  .hamburger{
+    display: none;
+  }
+    
 }

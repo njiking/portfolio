@@ -24,8 +24,32 @@ const textCase = "uppercase";
     <style>
         h1 {
           color: purple;
-          font-size: 4rem;
+          font-size: 2.5rem;
         }
+        .section-one{
+          padding-top: 10px;
+          padding-left: 2rem;
+          color: black;
+          font-family: 'Helvetica', sans-serif;
+          font-size: 24px;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          line-height: 1.5;
+          text-shadow: 2px 2px 4px #3f3a3a;
+        }
+        
+        .section-two{
+          padding-left: 2rem;
+          color: black;
+          font-family: 'Helvetica', sans-serif;
+          font-size: 24px;
+          font-weight: bold;
+          letter-spacing: 2px;
+          line-height: 1.5;
+          text-shadow: 2px 2px 4px #3f3a3a;
+        }
+        
         .skill {
     color: var(--skillColor);
     font-weight: var(--fontWeight);
@@ -35,47 +59,41 @@ const textCase = "uppercase";
   </head>
 
 <body>
-  <Header />
-
-    <h1>About Me</h1>
-    <h2>... and my journey</h2>
-
-<li>My name is {identity.firstName}.</li>
-<li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-{identity.hobbies.length >= 2 &&
-<li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-}
-
-    <p>Here are a few facts about me:</p>
-    <p>👋 Hi, i am a refugee from English-speaking Cameroon, now on a coding journey for six months. I'm passionate about crafting user-friendly and visually appealing websites.
-      🚀 Recently graduated and embracing a new life, I bring resilience and a fresh perspective to my work. From HTML and CSS to JavaScript and AstroDocs, I thrive on creating simple, elegant, and functional web experiences.
-      💡 As a refugee, I see coding not just as a skill but as a tool to start all over, connection and empowerment. Let's build something amazing together!.</p>
- <ul>
-        <li><a href="/posts/post-1/">Post 1</a></li>
-      </ul>
-
-
-</ul>
-<p>My skills are:</p>
-    <ul>
-{skills.map((skill) => <li class="skill">{skill}</li>)}
-</ul>
-
-</html>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-          <li>
-            <h3>Project 1</h3>
-            <p>Description of Project 1.</p>
-          </li>
-          <li>
-            <h3>Project 2</h3>
-            <p>Description of Project 2.</p>
-          </li>
-    
-        </ul>
+    <Header />
+      <section class="section-one">
+        <h1>About Me</h1>
+        <h2>... and my journey</h2>
+            
+            <li>My name is {identity.firstName}.</li>
+            <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+            {identity.hobbies.length >= 2 &&
+            <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+            }
       </section>
+      <section class="section-two">
+        <p>Here are a few facts about me:</p>
+        <p>👋 Hi, i am a refugee from English-speaking Cameroon, now on a coding journey for six months. I'm passionate about crafting user-friendly and visually appealing websites.
+          🚀 Recently graduated and embracing a new life, I bring resilience and a fresh perspective to my work. From HTML and CSS to JavaScript and AstroDocs, I thrive on creating simple, elegant, and functional web experiences.
+          💡 As a refugee, I see coding not just as a skill but as a tool to start all over, connection and empowerment. Let's build something amazing together!.</p>
+            </ul>
+            <p>My skills are:</p>
+        <ul>
+            {skills.map((skill) => <li class="skill">{skill}</li>)}
+            </ul>
+      </section>
+      <section id="projects">
+          <h2>Projects</h2>
+          <ul>
+            <li>
+              <h3>Project 1</h3>
+              <p>Description of Project 1.</p>
+            </li>
+            <li>
+              <h3>Project 2</h3>
+              <p>Description of Project 2.</p>
+            </li>
+          </ul>
+        </section>
       <Footer />
-</body>
-      </html>
+  </body>
+</html>
