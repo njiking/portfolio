@@ -91,5 +91,69 @@ text-align: left;
   .hamburger{
     display: none;
   }
+
+  .intro-section{
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #2c3e50; /* Dark background color */
+  padding: 40px;
+  margin: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .intro-section:hover{
+  background-color: #3498db; 
+  transform: scale(1.05); 
+  }
+  
+  .contact{
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgb(124, 70, 32);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px whitesmoke;
+  }
     
+  .contact-title {
+    text-align: center;
+    color: #333;
+  }
+
+  .contact p {
+    color: #afb3b2;
+  }
+
+  .contact form {
+    display: grid;
+    grid-gap: 10px;
+  }
+  label {
+    font-weight: bold;
+  }
+  input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+button:hover {
+  background-color: #2980b9;
+}
 }
