@@ -22,34 +22,62 @@ const textCase = "uppercase";
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
     <style>
-        h1 {
-          color: purple;
-          font-size: 2.5rem;
+
+h1 {
+          color: wheat;
+          font-size: 1.5rem;
+          
+        
         }
         .section-one{
+          
+          padding-left: 2rem;
+          color: rgb(196, 194, 194);
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          font-size: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          line-height: 1.5;
+          text-shadow: 2px 2px 4px #000000;
+        }
+
+        .projects{
+          padding-left: 2rem;
+          color: rgb(196, 194, 194);
+          font-family: 'Helvetica', sans-serif;
+          text-shadow: 2px 2px 4px #000000;
+        }
+
+@media screen and (min-width: 636px) {
+
+        h1 {
+          color: wheat;
+          font-size: 2.5rem;
+          font-family: 'Courier New', Courier, monospace;
+        
+        }
+        .section-one .{
           padding-top: 10px;
           padding-left: 2rem;
-          color: black;
+          color: rgb(196, 194, 194);
           font-family: 'Helvetica', sans-serif;
-          font-size: 24px;
+          font-size: 20px;
           font-weight: bold;
           text-transform: uppercase;
           letter-spacing: 2px;
           line-height: 1.5;
-          text-shadow: 2px 2px 4px #3f3a3a;
+          text-shadow: 2px 2px 4px #000000;
         }
-        
-        .section-two{
+
+        .projects{
+          padding-top: 10px;
           padding-left: 2rem;
-          color: black;
+          color: rgb(196, 194, 194);
           font-family: 'Helvetica', sans-serif;
-          font-size: 24px;
-          font-weight: bold;
-          letter-spacing: 2px;
-          line-height: 1.5;
-          text-shadow: 2px 2px 4px #3f3a3a;
+          text-shadow: 2px 2px 4px #000000;
         }
-        
+
+        }
         .skill {
     color: var(--skillColor);
     font-weight: var(--fontWeight);
@@ -69,8 +97,6 @@ const textCase = "uppercase";
             {identity.hobbies.length >= 2 &&
             <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
             }
-      </section>
-      <section class="section-two">
         <p>Here are a few facts about me:</p>
         <p>👋 Hi, i am a refugee from English-speaking Cameroon, now on a coding journey for six months. I'm passionate about crafting user-friendly and visually appealing websites.
           🚀 Recently graduated and embracing a new life, I bring resilience and a fresh perspective to my work. From HTML and CSS to JavaScript and AstroDocs, I thrive on creating simple, elegant, and functional web experiences.
@@ -81,9 +107,6 @@ const textCase = "uppercase";
             {skills.map((skill) => <li class="skill">{skill}</li>)}
             </ul>
       </section>
-
-
-      <section class="section-two">
           <section class="projects">
             <h2>Projects</h2>
             
