@@ -17,17 +17,14 @@ const { pageTitle } = Astro.props;
   <body>
     <Header />
     <slot />
+    <h1>{pageTitle}</h1>
     <section class="intro-section">
       <p>
-        <h1>{pageTitle}</h1>
         Hey, I'm Kingsley, a junior frontend web developer passionate
         about web development. Despite lacking formal experience, I've mastered
         HTML, CSS, and JavaScript through hands-on learning. My journey includes
         exploring responsive design and modern frameworks like AstroDocs,
-        Ubuntu, and Nodejs. This experience sharpens my skills and fuels a
-        commitment to continuous learning. Excited to contribute to
-        collaborative projects, I'm ready for the endless possibilities in the
-        ever-evolving world of web development.
+        Ubuntu, and Nodejs.
       </p>
     </section>
     <Footer />
