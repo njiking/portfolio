@@ -8,11 +8,10 @@ const identity = {
   firstName: "Nji kingsley Awah",
   country: "Poland",
   occupation: "Front end web developer",
-  hobbies: ["Football", "Music", ""],
+  hobbies: ["Football", "Music"],
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro"];
-
 ---
 <html lang="en">
   <head>
@@ -20,65 +19,127 @@ const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro"];
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
     <style>
-
-h1 {
+        h1 {
           color: wheat;
-          font-size: 1.5rem;
-          
-        
+          font-size: 2.5rem;
+          font-family: 'Courier New', Courier, monospace;
         }
-        .container-one{
-          display: flex;
-          flex-direction: column;
-          padding-left: 6rem;
-          color: rgb(196, 194, 194);
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        h2{
           font-size: 1rem;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          line-height: 1.5;
-          text-shadow: 2px 2px 4px #000000;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: #a34141;
         }
 
-        .container-two{
-          
-          color: rgb(143, 134, 134);
-          font-family: 'Helvetica', sans-serif;
-          font-size: 10px;
-          font-weight: bold;
-          letter-spacing: 1px;
-          line-height: 1.5;
-          text-shadow: 2px 2px 4px #000000;
+
+        .container{
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 5px;
+        align-items: center;
         }
 
-        .projects{
-          width: 50%;
-          padding-left: 2rem;
-          color: rgb(196, 194, 194);
-          font-family: 'Helvetica', sans-serif;
-          text-shadow: 2px 2px 4px #000000;
+        .container-1{
+            max-width:200px;
+            margin: 10px;
+            background-color: #969292;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .container-2{
+            overflow: auto;
+            max-width:250px;
+            background-color: #969292;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .container-3{
+            max-width: 250px;
+            margin: 0;
+            background-color: #969292;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .container-4{
+            max-width: 250px;
+            margin: 0;
+            background-color: #969292;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            text-shadow: 2px 2px 4px #000000;
+            
+        }
+        .container-5{
+            max-width: 250px;
+            margin: 0;
+            background-color: #969292;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .container, a{
+          color: white;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none;
+            border-bottom: 2px solid #f7efee;
+            transition: border-bottom 0.3s ease;
+            letter-spacing: 2px;
+        }
+       .container a:hover{
+        border-bottom: 2px solid #ffd700;
         }
 
-@media screen and (min-width: 636px) {
+        
+@media screen and (min-width: 1149px) {
 
   body {
             background-color: #2c3e50;
             color: #ecf0f1;
-            margin: 0;
-            padding: 0;
-
+            width: 100%;
+            height: auto;
         }
 
         h1 {
           color: wheat;
           font-size: 2.5rem;
           font-family: 'Courier New', Courier, monospace;
-        
+        }
+        h2{
+          font-size: 1.5rem;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: #a34141;
+        }
+
+        .details{
+          color: #1b1818;
+          line-height: 1.3rem;
+          font-size: 1rem;
+          font-weight: bold;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container{
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+         gap: 10px;
+        align-items: center;
         }
 
         .container-1{
+            display: grid;
             max-width: 500px;
-            margin: 0;
+            margin: 1rem;
             background-color: #969292;
             padding: 20px;
             border-radius: 8px;
@@ -87,18 +148,20 @@ h1 {
             text-shadow: 2px 2px 4px #000000;
         }
         .container-2{
+           display: grid;
             max-width: 500px;
-            margin: 0;
+            margin: 1rem;
             background-color: #969292;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-height: 300px;
+            max-height: 350px;
             text-shadow: 2px 2px 4px #000000;
         }
         .container-3{
+            
             max-width: 500px;
-            margin: 0;
+            margin: 1rem;
             background-color: #969292;
             padding: 20px;
             border-radius: 8px;
@@ -107,8 +170,9 @@ h1 {
             text-shadow: 2px 2px 4px #000000;
         }
         .container-4{
+            display: grid;
             max-width: 500px;
-            margin: 0;
+            margin: 1rem;
             background-color: #969292;
             padding: 20px;
             border-radius: 8px;
@@ -118,8 +182,9 @@ h1 {
             
         }
         .container-5{
+            display: grid;
             max-width: 500px;
-            margin: 0;
+            margin: 1rem;
             background-color: #969292;
             padding: 20px;
             border-radius: 8px;
@@ -138,7 +203,6 @@ h1 {
        .container a:hover{
         border-bottom: 2px solid #ffd700;
         }
-
         }
 
       </style>
@@ -147,39 +211,37 @@ h1 {
 <body>
     <Header />
     <h1>About Me</h1>
-    
-      <div class="container-1">
-        <h2>... and my journey</h2>
-            
-            My name is {identity.firstName}.
-            <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-            {identity.hobbies.length >= 2 &&
-            <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-            }
-            </div>
-        <div class="container-2">
-          <p>Here are a few facts about me:</p>
-          <p>👋 Hi, i am a refugee from English-speaking Cameroon, now on a coding journey for six months. I'm passionate about crafting user-friendly and visually appealing websites.
-            🚀 Recently graduated and embracing a new life, I bring resilience and a fresh perspective to my work. From HTML and CSS to JavaScript and AstroDocs, I thrive on creating simple, elegant, and functional web experiences.
-            💡 As a refugee, I see coding not just as a skill but as a tool to start all over, connection and empowerment. Let's build something amazing together!.</p>
-        </div>
-
-            <div class="container-3">
-              </ul>
-              <p>My skills are:</p>
-                      <ul>
-              {skills.map((skill) => <li class="skill">{skill}</li>)}
-              </ul>
-            </div>
-      
-          <div class="container-4">
-            <h2>Projects</h2>
-            </div>
-            
-            <div class="container-5">
-              <h3>Project 1</h3>
-            </div>
-         
+      <div class="container">
+        <div class="container-1">
+          <h2>... and my journey</h2>
+              My name is {identity.firstName}.
+              <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+              {identity.hobbies.length >= 2 &&
+              <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+              }
+              </div>
+          <div class="container-2">
+            <p class="details">Here are a few facts about me:</p>
+            <p>👋 Hi, i am a refugee from English-speaking Cameroon, now on a coding journey for six months. I'm passionate about crafting user-friendly and visually appealing websites.
+              🚀 Recently graduated and embracing a new life, I bring resilience and a fresh perspective to my work. From HTML and CSS to JavaScript and AstroDocs, I thrive on creating simple, elegant, and functional web experiences.
+              💡 As a refugee, I see coding not just as a skill but as a tool to start all over, connection and empowerment. Let's build something amazing together!.</p>
+          </div>
+              <div class="container-3">
+                </ul>
+                <p>My skills are:</p>
+                 <ul class="details">
+                {skills.map((skill) => <li class="skill">{skill}</li>)}
+                </ul>
+              </div>
+        
+            <div class="container-4">
+              <p>Projects</p>
+              </div>
+        
+              <div class="container-5">
+                <p>Project 1</p>
+              </div>
+      </div>
       <Footer />
   </body>
 </html>
