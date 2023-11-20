@@ -9,7 +9,7 @@ const identity = {
   hobbies: ["Football", "Music"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro"];
+const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro", "Ubuntu"];
 ---
 
 <style>
@@ -62,33 +62,36 @@ const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro"];
     max-height: 300px;
     text-shadow: 2px 2px 4px #000000;
   }
-  .container-4 {
+
+  .container-parent {
     display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin: 0;
-    width: 25%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-height: 100px;
-    text-shadow: 2px 2px 4px #000000;
+   flex-direction: row; 
+   height: 70vh;
+   }
+
+  .container-4 {
+    flex-wrap: wrap;
+    flex: 1; 
+    margin: 55px; 
     color: #ffffff;
+    flex-wrap: wrap;
   }
 
-  .container-5 {
-    flex: 1;
-    margin: 0;
+  a{ 
+
+    color: #ffffff;
+    margin: 5px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #7f9cf5;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-height: 300px;
-    text-shadow: 2px 2px 4px #000000;
-  }
-  .container a {
-    color: white;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    width: 129px;
     text-decoration: none;
-    transition: border-bottom 0.3s ease;
-    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+
   }
 
   @media screen and (min-width: 700px) {
@@ -134,12 +137,18 @@ const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro"];
         {skills.map((skill) => <li class="skill">{skill}</li>)}
       </ul>
     </div>
-
-    <div class="container-4">
-      <h1>Projects</h1>
-      <p>Check out some projects that I have worked on.</p>
-      <img src="/src/images/ttt.png" alt="tic tac toe game image" width="250" height="250">
-       <a href="https://tictactoe-njiking.vercel.app/">tic tac toe game</a>
-    </div>
   </div>
+
+ <div class="container-parent">
+   <div class="container-4">
+        <h1>Projects</h1>
+        <p>Check out some projects that I have worked on.</p>
+        
+        <img src="/src/images/ttt.png" alt="tic tac toe game image" width="250" height="250"> 
+         <a href="https://tictactoe-njiking.vercel.app/">tic tac toe game</a>
+
+           <img src="/src/images/Astro blog.png" alt="first Astro blog image" width="300" height="250">
+           <a href="https://learn-astro-l1i519heh-njiking.vercel.app/">first Astro site</a>
+      </div>
+ </div>
 </BaseLayout>
