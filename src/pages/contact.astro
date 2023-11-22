@@ -6,7 +6,7 @@ const pageTitle = "Contact Me";
             <BaseLayout pageTitle={pageTitle}>
               <div class="contact">
                   <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-                    <form id="contactForm" class="space-y-4">
+                    <form id="contactForm" class="space-y-4" action="https://api.web3forms.com/submit" method="POST">
                       <input type="hidden" name="access_key" value="7bc36f12-ba62-468a-bb0c-efda026c5e61">
                       <div>
                         <label for="name" class="text-gray-700">Name</label>
