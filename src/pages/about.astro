@@ -9,7 +9,38 @@ const identity = {
   hobbies: ["Football", "Music"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro", "Ubuntu"];
+const skills = [
+    {
+        name: 'HTML',
+        icon: '/src/images/html-5.png'
+    },
+
+    {
+        name: 'CSS',
+        icon: '/src/images/css.png'
+    
+    },
+
+    {
+        name: 'JavaScript',
+        icon: '/src/images/js.png'
+    },
+
+    {
+        name: 'Node.js',
+        icon: '/src/images/nodejs.png'
+    },
+
+    {
+        name: 'Astro',
+        icon: '/src/images/astro.png'
+    },
+
+    {
+        name: 'Ubuntu',
+        icon: '/src/images/ubuntu.png'
+    }
+];
 ---
 
 <style>
@@ -53,6 +84,7 @@ const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro", "Ubuntu"];
     text-shadow: 2px 2px 4px #000000;
   }
   .container-3 {
+    display: inline-block;
     flex: 1;
     margin: 0;
     color: white;
@@ -76,6 +108,15 @@ const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro", "Ubuntu"];
     color: #ffffff;
     flex-wrap: wrap;
   }
+
+  .container-projects{
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .container-links{
+      display: block;
+    }
 
   a{ 
 
@@ -103,9 +144,11 @@ const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro", "Ubuntu"];
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
     }
-
+   
   }
 </style>
+
+
 <BaseLayout pageTitle="About me">
   <div class="container">
     <div class="container-1">
@@ -134,7 +177,12 @@ const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro", "Ubuntu"];
     <div class="container-3">
       <p>My skills are:</p>
       <ul class="details">
-        {skills.map((skill) => <li class="skill">{skill}</li>)}
+        {skills.map((skill, index) => (
+          <div key={index}>
+              <span>{skill.name}</span>
+              <img src={skill.icon} alt='images of icons' />
+          </div>
+      ))}      
       </ul>
     </div>
   </div>
@@ -144,15 +192,15 @@ const skills = ["HTML", "CSS", "JavaScript", "Nodejs", "Astro", "Ubuntu"];
         <h1>Projects</h1>
         <p>Check out some projects that I have worked on.</p>
 
-        <div> 
+        <div class="container-projects"> 
           <div> 
           <img src="/src/images/ttt.png" alt="tic tac toe game image" width="250" height="250"> 
-         <a href="https://tictactoe-njiking.vercel.app/">tic tac toe game</a>
+         <a class="container-links" href="https://tictactoe-njiking.vercel.app/">tic tac toe game</a>
         </div>
 
         <div>
           <img src="/src/images/Astro blog.png" alt="first Astro blog image" width="300" height="250">
-           <a href="https://learn-astro-l1i519heh-njiking.vercel.app/">first Astro site</a>
+           <a class="container-links" href="https://learn-astro-l1i519heh-njiking.vercel.app/">first Astro site</a>
           </div>
         </div>
            
