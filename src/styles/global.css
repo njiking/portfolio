@@ -4,14 +4,13 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background-image: url('/src/images/clint.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  overflow: auto;
-}
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #467592, #3a2927);
+    color: #fff;
+  }
+  
 
 h1 {
   font-size: 2rem;
@@ -138,9 +137,16 @@ h1 {
 
 .contact {
   max-width: 350px;
-  margin: 50px auto;
+  margin: 30px auto; 
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
 }
 
 input,
@@ -200,6 +206,7 @@ a {
 
 label {
   font-weight: bold;
+  color: #5a5251;
 }
 
 input,

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+
 const pageTitle = "About Me";
 const identity = {
   firstName: "Nji kingsley Awah",
@@ -12,33 +13,33 @@ const identity = {
 const skills = [
     {
         name: 'HTML',
-        icon: '/src/images/html-5.png'
+        icon: '/html-5.png'
     },
 
     {
         name: 'CSS',
-        icon: '/src/images/css.png'
+        icon: '/css.png'
     
     },
 
     {
         name: 'JavaScript',
-        icon: '/src/images/js.png'
+        icon: '/js.png'
     },
 
     {
         name: 'Node.js',
-        icon: '/src/images/nodejs.png'
+        icon: '/nodejs.png'
     },
 
     {
         name: 'Astro',
-        icon: '/src/images/astro.png'
+        icon: '/astro.png'
     },
 
     {
         name: 'Ubuntu',
-        icon: '/src/images/ubuntu.png'
+        icon: '/ubuntu.png'
     }
 ];
 ---
@@ -118,6 +119,20 @@ const skills = [
       justify-content: center;
       gap: 25px;
       flex-wrap: wrap;
+    }
+
+    .container-image {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .container-image:hover {
+      transform: scale(1.1);
     }
 
     .container-links{
@@ -206,12 +221,13 @@ const skills = [
 
         <div class="container-projects"> 
           <div> 
-          <img src="/src/images/ttt.png" alt="tic tac toe game image" width="250" height="250"> 
+          <img class="container-image" src="/ttt.png" alt="tic tac toe game image" width="250" height="250"> 
          <a class="container-links" href="https://tictactoe-njiking.vercel.app/">tic tac toe game</a>
         </div>
 
         <div>
-          <img src="/src/images/Astro blog.png" alt="first Astro blog image" width="300" height="250">
+          <img class="container-image" src="/Astro blog.png" alt="first Astro blog image" width="300" height="250">
+          
            <a class="container-links" href="https://learn-astro-l1i519heh-njiking.vercel.app/">first Astro site</a>
           </div>
         </div>
