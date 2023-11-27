@@ -1,6 +1,47 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = " WELCOME";
+
+const identity = {
+  firstName: "Nji kingsley Awah",
+  country: "Poland",
+  occupation: "Front end web developer",
+  hobbies: ["Football", "Music"],
+};
+
+const skills = [
+    {
+      
+        name: 'HTML',
+        icon: '/html-5.png'
+    },
+
+    {
+        name: 'CSS',
+        icon: '/css.png'
+    
+    },
+
+    {
+        name: 'JavaScript',
+        icon: '/js.png'
+    },
+
+    {
+        name: 'Node.js',
+        icon: '/nodejs.png'
+    },
+
+    {
+        name: 'Astro',
+        icon: '/astro.png'
+    },
+
+    {
+        name: 'Ubuntu',
+        icon: '/ubuntu.png'
+    }
+];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -14,5 +55,260 @@ const pageTitle = " WELCOME";
       responsive design and modern frameworks.
     </section>
   </div>
+
+
+  <style>
+    h1 {
+      color: wheat;
+      font-size: 2.5rem;
+    }
+  
+    h2 {
+      font-size: 1rem;
+      color: #ffffff;
+    }
+  
+    .container {
+      display: block;
+      gap: 5px;
+      align-items: center;
+    }
+  
+    .container-1 {
+      flex: 1;
+      overflow: auto;
+      margin: 10px;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-height: 300px;
+      text-shadow: 2px 2px 4px #000000;
+    }
+    .container-2 {
+      overflow: auto;
+      flex: 1;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-height: 350px;
+      text-shadow: 2px 2px 4px #000000;
+    }
+    .container-3 {
+      flex: 1;
+      margin: 0;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-height: 500px;
+      text-shadow: 2px 2px 4px #000000;
+    }
+  
+    .container-parent {
+      display: flex;
+     flex-direction: row; 
+     min-height: 70vh;
+     }
+  
+    .container-4 {
+      flex-wrap: wrap;
+      flex: 1; 
+      margin: 55px; 
+      color: #ffffff;
+    }
+  
+  
+    .container-p{
+      display: flex;
+        justify-content: center;
+  }
+    
+    .container-projects{
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+  
+      .container-image {
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+  
+      .container-image:hover {
+        transform: scale(1.1);
+      }
+  
+      .container-links{
+        display: block;
+        margin-left: 50px;
+      }
+      
+      .details-map{
+      display: flex;
+      gap: 25px;
+      flex: 1 1 45%; 
+      max-width: 300px; 
+      flex-wrap: wrap;
+      padding: 10px;
+      box-sizing: border-box;
+      }
+  
+      
+    a{ 
+      color: #ffffff;
+      margin: 5px;
+      font-size: 16px;
+      padding: 10px;
+      background-color: #7f9cf5;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(241, 235, 235, 0.1);
+      max-height: 300px;
+      width: 129px;
+      text-decoration: none;
+      text-align: center;
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+
+    a:hover{
+      background-color: #7f9cf5;
+      box-shadow: 0 0 10px rgba(241,
+      235, 235, 0.3);
+      color: #ecd0d0;
+      text-shadow: 2px 2px 4px #0000;
+  
+    }
+
+
+    .phone{
+    background: none;
+    box-shadow: none;
+    }
+    .phone:hover{
+      background: none;
+      box-shadow: none;
+    }
+  
+    @media screen and (min-width: 700px) {
+      .details {
+        color: rgba(171, 207, 141, 0.514)248, 0.514);
+        line-height: 1.3rem;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+     
+    }
+  </style>
+  
+    <div class="container">
+      <div class="container-1">
+        <h2>Learn about me  and my journey</h2>
+        <p>My name is {identity.firstName}.</p>
+        <p>I live in {identity.country} and I work as a {identity.occupation}.</p>
+        {
+          identity.hobbies.length >= 2 && (
+            <p>
+              Two of my hobbies are: {identity.hobbies[0]} and{" "}
+              {identity.hobbies[1]}
+            </p>
+          )
+        }
+      </div>
+      <div class="container-2">
+        <p class="details">Here are a few facts about me:</p>
+        <p>
+          👋 Hi, I'm passionate about crafting user-friendly and
+          visually appealing websites. 🚀 Embracing a new
+          life, I bring resilience and a fresh perspective to my work. From HTML
+          and CSS to JavaScript and AstroDocs, I thrive on creating simple,
+          elegant, and functional web experiences💡.
+        </p>
+      </div>
+      <div class="container-3">
+        <p>My skills are:</p>
+        <ul class="details-map">
+          {skills.map((skill, index) => (
+            <div key={index}>
+                <span>{skill.name}</span>
+                <img src={skill.icon} alt='images of icons' />
+            </div>
+        ))}      
+        </ul>
+      </div>
+    </div>
+  
+   <div id="projects">
+     <div class="container-parent">
+       <div class="container-4">
+            <h1>Projects</h1>
+            <p class="container-p">Check out some projects that I have worked on.</p>
+            <div class="container-projects">
+              <div>
+              <img class="container-image" src="/ttt.png" alt="tic tac toe game image" width="250" height="250">
+             <a class="container-links" href="https://tictactoe-njiking.vercel.app/">tic tac toe game</a>
+            </div>
+            <div>
+              <img class="container-image" src="/Astro blog.png" alt="first Astro blog image" width="300" height="250">
+     
+               <a class="container-links" href="https://learn-astro-l1i519heh-njiking.vercel.app/">first Astro site</a>
+              </div>
+            </div>
+     
+          </div>
+     </div>
+   </div>
+
+   <div id="contact">
+    <h1>Contact</h1>
+     <div class="contact">
+      <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <form id="contactForm" class="space-y-4" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="7bc36f12-ba62-468a-bb0c-efda026c5e61">
+          <div>
+            <label for="name" class="text-gray-700">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
+          </div>
+          <div>
+            <label for="email" class="text-gray-700">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
+          </div>
+          <div>
+            <label for="phone" class="text-gray-700">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="(123) 456-7890" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
+          </div>
+          <div>
+            <label for="text" class="text-gray-700">message</label>
+            <input type="text" id="phone" name="phone" placeholder="Message" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
+          </div>
+          <div class="submit">
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+              Submit Form
+            </button>
+          </div>
+        </form>
+      </div>
+     </div>
+   </div>
+
+
+<section class="contact-details">
+  <h2>Contact Details</h2>
+  <p>Feel free to reach out through any of the following:</p>
+    <div class="tell">
+      <a class="phone" href="tel:+48698168694">
+      <img src="/phone.png" alt="Call me">
+        </a>
+    </div>
+</section>
+
 </BaseLayout>
 
