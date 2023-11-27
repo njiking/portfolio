@@ -116,7 +116,9 @@ h1 {
 
 .hi {
   font-weight: bold;
-  font-style: italic;
+  letter-spacing: 2px;
+  line-height: 1.2em;
+  font-family: cursive;
   font-size: 3rem;
   text-transform: uppercase;
 }

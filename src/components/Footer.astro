@@ -4,12 +4,22 @@ import Social from './Social.astro';
 <style>
 footer {
   color: #fff;
-  padding: 50px;
+  padding: 40px;
   text-align: center;
  }
+
+.footer-links{
+  display: flex;
+  justify-content: center;
+  gap: 25px
+  ;
+}
   </style>
 <footer>
-  <Social platform="Github" username="njiking" />
+  <div class="footer-links">
+    <Social platform="Github" username="njiking" />
+    <Social platform="Linkedin" username="www.linkedin.com/in/nji-kingsley-awah-b31a40278" />
+  </div>
   <p>&copy; 2023 Kingsley. All rights reserved.</p>
 </footer>
   
