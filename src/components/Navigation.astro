@@ -1,8 +1,146 @@
 ---
+
 ---
 
- <nav class="nav-links">
-        <a href="/">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">contact</a>
+<nav class="nav-links">
+        <div id="container">
+          <!-- Navigation Bar -->
+          <div class="navbar flexrow">
+            <p>Kingsley</p>
+            <ul class="navbuttons">
+              <li><a class="scroll" href="/">Home</a></li>
+              <li><a class="scroll" href="#about">About</a></li>
+              <li><a class="scroll" href="#projects">projects</a></li>
+              <li><a class="scroll" href="#contact">Contact</a></li>
+              <li>
+                <a class="navicon" href="javascript:void(0)"
+                  ><div id="stack">
+                    <span class="iconbar"></span><span class="iconbar"></span><span
+                      class="iconbar"></span>
+                  </div></a>
+              </li>
+            </ul>
+          </div>
 </nav>
+
+  <style>
+
+    @media only screen and (min-width: 700px) {
+      #container {
+        height: 100%;
+      }
+
+      /*Flex*/
+      .flexrow {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .flexcol,
+      #techskills li,
+      #projectlist li,
+      #projectlist a {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /*Navigation Bar*/
+      .navbar {
+        height: 3em;
+        width: 100%;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #dbdbdb;
+        box-shadow: 0px 2px 5px #868686;
+        z-index: 1;
+      }
+
+      .navbar p {
+        margin-left: 2em;
+        color: #2f4763;
+        font-weight: 800;
+        padding: 2px;
+        border-bottom: 2px solid #ffb741;
+      }
+
+      .navbuttons {
+        padding-right: 2em;
+        margin-right: 1em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+        height: 100%;
+      }
+
+      .navbuttons li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 0px 10px;
+      }
+
+      .navbuttons a {
+        background-color: #dbdbdb;
+        display: inline-block;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1em;
+        color: #2f4763;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+      }
+
+      .navbuttons a:after {
+        content: "";
+        display: block;
+        margin: auto;
+        height: 3px;
+        width: 0px;
+        background: transparent;
+        transition:
+          width 0.5s ease,
+          background-color 0.5s ease;
+        -webkit-transition:
+          width 0.5s ease,
+          background-color 0.5s ease;
+        -moz-transition:
+          width 0.5s ease,
+          background-color 0.5s ease;
+      }
+
+      .navbuttons a:hover:after {
+        width: 100%;
+        background-color: #2f4763;
+      }
+
+      .navbuttons a:hover {
+        background-color: #ffb741;
+        cursor: pointer;
+        color: #fff;
+      }
+
+      .navbuttons li:last-child {
+        display: none;
+      }
+
+      .activenav {
+        background-color: #ffb741 !important;
+        color: #fff !important;
+      }
+
+
+    }
+  </style>
+</div>

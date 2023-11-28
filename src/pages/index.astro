@@ -81,28 +81,14 @@ const skills = [
       color: white;
       padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-height: 300px;
-      text-shadow: 2px 2px 4px #000000;
-    }
-    .container-2 {
-      overflow: auto;
-      flex: 1;
-      color: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-height: 350px;
+      box-shadow: 0 0 10px rgba(238, 231, 231, 0.507);
       text-shadow: 2px 2px 4px #000000;
     }
     .container-3 {
       flex: 1;
       margin: 0;
-      color: white;
       padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-height: 500px;
       text-shadow: 2px 2px 4px #000000;
     }
   
@@ -153,8 +139,7 @@ const skills = [
       .details-map{
       display: flex;
       gap: 25px;
-      flex: 1 1 45%; 
-      max-width: 300px; 
+      flex: 1 1 45%;  
       flex-wrap: wrap;
       padding: 10px;
       box-sizing: border-box;
@@ -206,10 +191,14 @@ const skills = [
           sans-serif;
       }
      
+     .container{
+      display: flex;
+     }
     }
   </style>
-  
+  <h1>About me</h1>
     <div class="container">
+      
       <div class="container-1">
         <h2>Learn about me  and my journey</h2>
         <p>My name is {identity.firstName}.</p>
@@ -222,8 +211,6 @@ const skills = [
             </p>
           )
         }
-      </div>
-      <div class="container-2">
         <p class="details">Here are a few facts about me:</p>
         <p>
           👋 Hi, I'm passionate about crafting user-friendly and
@@ -234,7 +221,7 @@ const skills = [
         </p>
       </div>
       <div class="container-3">
-        <p>My skills are:</p>
+        <h2>skills</h2>
         <ul class="details-map">
           {skills.map((skill, index) => (
             <div key={index}>

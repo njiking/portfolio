@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    margin: 0 100px;
+    margin: 20px;
     min-height: 100vh;
     background: linear-gradient(135deg, #467592, #3a2927);
     color: #fff;
@@ -14,17 +14,9 @@ body {
    width: 200px;
    margin: 0 auto;
    display: block;
-   margin-top: 10px;
+   margin-top: 20px;
   }
 
-h1 {
-  font-size: 2rem;
-  color: rgb(255, 255, 255);
-  text-align: left;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  margin-left: 25px;
-}
 
 .hamburger {
   padding-right: 20px;
@@ -71,24 +63,6 @@ h1 {
   transform: translateY(-14px) rotate(-45deg);
 }
 
-.nav-links {
-  display: none;
-  text-align: left;
-  text-decoration: none;
-  font-size: 1rem;
-  margin-top: 5px;
-}
-
-.nav-links a {
-  display: block;
-  text-transform: uppercase;
-  color: rgb(224, 193, 193);
-  text-decoration: none;
-  transition: all 0.3s linear;
-  padding: 10px 10px;
-  margin: 0;
-}
-
 .expanded {
   /* NOTES: make the nav menu cover the entire screen for small screen devices */
   position: fixed;
@@ -100,10 +74,6 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.nav-links a:hover {
-  color: rgb(95, 67, 57);
 }
 
 .intro-section {
@@ -232,39 +202,12 @@ button:hover {
 
 
 @media screen and (min-width: 700px) {
-  .nav-links {
-      margin: 0;
-      display: block;
-      position: static;
-      width: auto;
-      background: black;
-      border-radius: 5rem;
-      box-shadow: 2px 5px 5px whitesmoke;
-      text-align: right;
-      margin: 5px;
-  }
 
-  .nav.active {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      background: white;
-  }
-
-  .nav-links a {
-      display: inline-block;
-      padding: 15px 20px;
-      color: whitesmoke;
-      text-align: left;
-      position: relative;
-      letter-spacing: 0.15rem;
+  body {
+    margin: 0 80px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #467592, #3a2927);
+    color: #fff;
   }
 
   .hamburger {
@@ -272,9 +215,10 @@ button:hover {
   }
 
   .welcome{
-    width: 550px;
+    width: 250px;
     margin: 0 auto;
     display: block;
+    margin-top: 50px;
    }
  
 
