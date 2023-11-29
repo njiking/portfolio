@@ -38,3 +38,14 @@ document
       }
     });
   });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var scrollUpBtn = document.getElementById("scrollUpBtn");
+    window.addEventListener("scroll", function () {
+        scrollUpBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    });
+    scrollUpBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
