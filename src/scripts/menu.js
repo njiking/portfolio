@@ -38,15 +38,3 @@ document
       }
     });
   });
-  
-
-
-
- /* const menuButtons = document.querySelectorAll('.menu-button');
-
-menuButtons.forEach((e) => {
-    e.addEventListener('click', () => {
-        hamburger.classList.remove('expanded');
-        navLinks.classList.remove('expanded');
-    })
-})/*
