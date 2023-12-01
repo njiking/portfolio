@@ -10,10 +10,6 @@ document.querySelector('.hamburger').addEventListener('click', () => {
           nav.classList.toggle('active');
   });
 
-  // Initialize the phone number mask
-var phoneMask = IMask(document.getElementById("phone"), {
-  mask: "(000) 000-0000"
-});
 
 // Handle form submission
 document
@@ -40,7 +36,9 @@ document
   });
 
 
-  document.addEventListener("DOMContentLoaded", function () {
+  
+if (window.innerWidth > 699) {
+document.addEventListener("DOMContentLoaded", function () {
     var scrollUpBtn = document.getElementById("scrollUpBtn");
     window.addEventListener("scroll", function () {
         scrollUpBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
@@ -49,3 +47,4 @@ document
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
+}
