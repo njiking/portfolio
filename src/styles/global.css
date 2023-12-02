@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #f5deb3;
+  --accent-color: #7f9cf5;
+}
+
 html {
   display: block;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -8,10 +14,9 @@ body {
     margin: 20px;
     min-height: 100vh;
     background: linear-gradient(135deg, #467592, #3a2927);
-    color: #fff;
+    color: var(--primary-color);
   }
-  
-  
+
   .welcome{
    width: 170px;
    margin: 0 auto;
@@ -79,13 +84,19 @@ body {
   width: 35%;
   max-height: 45%;
   transition:  0.2s ease-in, transform 0.2s ease-out;
-  color: white;
+  color: var(--primary-color);
+  border-radius: 10px;
+}
+h1{
+  display: flex;
+  justify-content: center;
+
 }
 
 .intro-section {
   min-height: 40vh;
   font-size: 15px;
-  color: #fff;
+  color: var(--primary-color);
   padding: 30px;
   margin-left: 1rem;
   transition: background-color 1s ease, transform 0.3s ease;
@@ -136,7 +147,7 @@ textarea {
   display: flex;
   justify-content: center;
   margin-top: 5px;
-  color: white;
+  color: var(--primary-color);
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
@@ -192,8 +203,8 @@ textarea {
 }
 
 button {
-  background-color: #0c4f7c;
-  color: #fff;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
   padding: 5px 7.5px;
   border: none;
   border-radius: 4px;
@@ -202,7 +213,7 @@ button {
 }
 
 button:hover {
-  background-color: #225e86;
+  background-color: var(--accent-color);
 }
 
 #scrollUpBtn {
@@ -216,7 +227,7 @@ button:hover {
     margin: 0 80px;
     min-height: 100vh;
     background: linear-gradient(135deg, #467592, #3a2927);
-    color: #fff;
+    color: var(--primary-color);
   }
 
   .hamburger {
@@ -276,7 +287,7 @@ button:hover {
 
   .tell {
       margin: 0;
-      color: #c1c8cc;
+      color: hsl(202, 10%, 78%);
       font-size: 1rem;
       line-height: 1.5em;
       letter-spacing: 0.05em;
@@ -303,7 +314,7 @@ button:hover {
   }
 
   button {
-      background-color: #3498db;
+      background-color: var(--accent-color);
       color: #fff;
       padding: 10px 15px;
       border: none;
