@@ -10,17 +10,11 @@
           <!-- Navigation Bar -->
           <div class="navbar flexrow">
             <ul class="navbuttons">
-              <li><a class="scroll" href="/">Home</a></li>
-              <li><a class="scroll" href="#about">About</a></li>
-              <li><a class="scroll" href="#projects">projects</a></li>
-              <li><a class="scroll" href="#contact">Contact</a></li>
-              <li>
-                <a class="navicon" href="javascript:void(0)"
-                  ><div id="stack">
-                    <span class="iconbar"></span><span class="iconbar"></span><span
-                      class="iconbar"></span>
-                  </div></a>
-              </li>
+              <li><a href="/">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li>    
             </ul>
           </div>
 </nav>
@@ -36,8 +30,25 @@
   list-style: none;
   padding: 0;
   gap: 15px;
-  transition:  0.3s ease-in, transform 0.3s ease-out;
+  /* NOTES: make the nav menu cover the entire screen for small screen devices */
+  position: fixed;
+  /* NOTES: give background color */
+  background: hsl(180, 100%, 15%);
+  /* NOTES: center the items horizontally and vertically */
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 53px;
+  width: 35%;
+  max-height: 45%;
+  transition:  0.2s ease-in, transform 0.2s ease-out;
+  color: var(--primary-color);
+  border-radius: 10px;
 }
+.navbuttons a {  
+        color: #ffffff;
+ }
+
 
 .logo{
   width: 50%; 
@@ -152,10 +163,6 @@
         background-color: #ffb741;
         cursor: pointer;
         color: var(--primary-color);
-      }
-
-      .navbuttons li:last-child {
-        display: none;
       }
 
       .activenav {
