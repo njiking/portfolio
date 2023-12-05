@@ -51,7 +51,7 @@ const skills = [
       <p class="hi">Hi, I'm <span class="name">Kingsley</span></p>
       <h3 class="hi">frontend web developer</h3>
       <h4>WELCOME TO MY SPACE</h4>
-       i am passionate about web development, I've mastered HTML, CSS, and
+       I am passionate about web development, I've mastered HTML, CSS, and
       JavaScript through hands-on learning. My journey includes exploring
       responsive design and modern frameworks.
     </section>
@@ -111,7 +111,11 @@ const skills = [
       color: var(--primary-color);
     }
   
-  
+    .pointer{
+      display: flex;
+      justify-content: center;
+     }
+
     .container-p{
       display: flex;
         justify-content: center;
@@ -199,9 +203,16 @@ const skills = [
      .container{
       display: flex;
      }
+
     }
   </style>
-  <h1>About me</h1>
+
+  <div class="pointer">
+    <h1>About me</h1> <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/4bf20032-b26c-423e-86d7-43834f8bd62c/MBD0U4Cbqx.json" background="transparent" speed="1" style="width: 150px; height: 150px" direction="1" mode="bounce" loop autoplay></dotlottie-player>
+  </div>
+
+  
+
     <div class="container">
       
       <div class="container-1">
@@ -216,14 +227,16 @@ const skills = [
             </p>
           )
         }
+    
         <p class="details">Here are a few facts about me:</p>
         <p>
           👋 Hi, I love crafting user-friendly and
           visually appealing websites. 🚀 Embracing a new
           life, I bring resilience and a fresh perspective to my work💡.
         </p>
+
       </div>
-      <div class="container-3">
+ <div class="container-3">
         <h2>skills</h2>
         <ul class="details-map">
           {skills.map((skill, index) => (
@@ -233,6 +246,7 @@ const skills = [
             </div>
         ))}      
         </ul>
+        
       </div>
     </div>
   
@@ -267,22 +281,27 @@ const skills = [
       <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
         <form id="contactForm" class="space-y-4" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="7bc36f12-ba62-468a-bb0c-efda026c5e61">
-          <div>
+         
+          <div class="input-details">
             <label for="name" class="text-gray-700">Name</label>
             <input type="text" id="name" name="name" placeholder="Your Name" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
           </div>
-          <div>
+
+          <div class="input-details">
             <label for="email" class="text-gray-700">Email</label>
             <input type="email" id="email" name="email" placeholder="Your Email" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
           </div>
-          <div>
+
+          <div class="input-details">
             <label for="phone" class="text-gray-700">Phone</label>
             <input type="text" id="phone" name="phone" placeholder="(123) 456-7890" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
           </div>
-          <div>
+
+          <div class="input-details">
             <label for="text" class="text-gray-700">message</label>
             <input type="text" id="phone" name="phone" placeholder="Message" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
           </div>
+
           <div class="submit">
             <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
               Submit Form

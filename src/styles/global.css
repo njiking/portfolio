@@ -2,6 +2,7 @@
   --primary-color: #ffffff;
   --secondary-color: #f5deb3;
   --accent-color: #7f9cf5;
+  --nav-e-color: #004d4d;
 }
 
 html {
@@ -23,7 +24,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: rgb(47, 57, 59);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +32,7 @@ body {
   }
   
   .loader {
-    border: 8px solid #f3f3f3;
+    border: 8px solid var(--primary-color);
     border-top: 8px solid #3498db;
     border-radius: 50%;
     width: 50px;
@@ -69,7 +70,7 @@ body {
   width: 50px;
   margin: 9px auto;
   height: 5px;
-  background-color: #f7f7f7;
+  background-color: var(--primary-color);
   /* NOTES: reduce the animation duration and animation opacity property for the second line */
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -129,9 +130,9 @@ h1{
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  background: #f5f5f5;
+  background: var(--primary-color);
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
 
 .contact {
@@ -148,7 +149,7 @@ textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--primary-color);
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -164,15 +165,6 @@ textarea {
   cursor: pointer;
 }
 
-.contact-title {
-  text-align: center;
-  padding-top: 5px;
-}
-
-.contact p {
-  color: #e9dfdf;
-  font-size: 1rem;
-}
 
 .contact-details {
   display: block;
@@ -185,7 +177,7 @@ textarea {
 }
 
 .tell {
-  color: #c1c8cc;
+  color: var(--primary-color);
   font-size: 1rem;
   line-height: 1.5em;
   letter-spacing: 0.05em;
@@ -208,7 +200,7 @@ textarea {
   width: 50%;
   padding: 5px;
   box-sizing: border-box;
-  border: 1px solid #ddd;
+  border: 0.5px solid var(--nav-e-color);
   border-radius: 4px;
 }
 
@@ -280,15 +272,6 @@ button:hover {
       background-color: #224963;
   }
 
-  .contact-title {
-      text-align: center;
-      color: #ddd7d7;
-  }
-
-  .contact p {
-      color: #c6cccb;
-  }
-
   .contact-details {
       display: flex;
       flex-direction: column;
@@ -297,7 +280,7 @@ button:hover {
 
   .tell {
       margin: 0;
-      color: hsl(202, 10%, 78%);
+      color: var(--primary-color);
       font-size: 1rem;
       line-height: 1.5em;
       letter-spacing: 0.05em;
@@ -308,10 +291,12 @@ button:hover {
   a {
       text-decoration: none;
       font-weight: bold;
+      
   }
 
   label {
       font-weight: bold;
+
   }
 
   input,
@@ -319,13 +304,15 @@ button:hover {
       width: 100%;
       padding: 10px;
       box-sizing: border-box;
-      border: 1px solid #ddd;
+      border: 0.5px solid var(--secondary-color);
       border-radius: 4px;
+      background-color: var(--nav-e-color);
+      color: var(--primary-color);
   }
 
   button {
       background-color: var(--accent-color);
-      color: #fff;
+      color: var(--primary-color);
       padding: 10px 15px;
       border: none;
       border-radius: 4px;
@@ -333,7 +320,7 @@ button:hover {
   }
 
   button:hover {
-      background-color: #2980b9;
+      background-color:var(--accent-color);
   }
 
   #scrollUpBtn {

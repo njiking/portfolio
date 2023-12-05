@@ -33,7 +33,7 @@
   /* NOTES: make the nav menu cover the entire screen for small screen devices */
   position: fixed;
   /* NOTES: give background color */
-  background: hsl(180, 100%, 15%);
+  background: var(--nav-e-color);
   /* NOTES: center the items horizontally and vertically */
   justify-content: center;
   align-items: center;
@@ -46,7 +46,7 @@
   border-radius: 10px;
 }
 .navbuttons a {  
-        color: #ffffff;
+        color: var(--primary-color);
  }
 
 
@@ -93,7 +93,7 @@
         transform: translateX(-50%);
         background-color: #dbdbdb;
         box-shadow: 0px 2px 5px #868686;
-        z-index: 1;
+        z-index: -1;
       }
 
       .navbar p {
@@ -176,6 +176,7 @@
   height: auto; 
   border-radius: 10px;
   position: fixed;
+
 }
     }
 
