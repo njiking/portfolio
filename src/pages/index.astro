@@ -86,8 +86,8 @@ const skills = [
       color: var(--primary-color);
       padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(238, 231, 231, 0.507);
-      text-shadow: 2px 2px 4px #000000;
+      box-shadow: 0 0 10px var(--secondary-color);
+      text-shadow: 2px 2px 4px var(--shadow-color);
     }
     .container-3 {
 
@@ -95,7 +95,7 @@ const skills = [
       margin: 0;
       padding: 15px;
       border-radius: 8px;
-      text-shadow: 2px 2px 4px #000000;
+      text-shadow: 2px 2px 4px var(--shadow-color);
     }
   
     .container-parent {
@@ -133,7 +133,6 @@ const skills = [
         height: 250px;
         overflow: hidden;
         border-radius: 16px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
       }
   
@@ -161,22 +160,21 @@ const skills = [
       margin: 5px;
       font-size: 16px;
       padding: 10px;
-      background-color: #7f9cf5;
+      background-color: var(--accent-color);
       border-radius: 8px;
       box-shadow: 0 0 10px var(--background-load);
       max-height: 300px;
       width: 147px;
       text-decoration: none;
       text-align: center;
-      text-shadow: 2px 2px 4px #000000;
+      text-shadow: 2px 2px 4px var(--shadow-color);
     }
 
     a:hover{
-      background-color: #7f9cf5;
-      box-shadow: 0 0 10px rgba(241,
-      235, 235, 0.3);
+      background-color: var(--accent-color);
+      box-shadow: var(--name-color);
       color: var(--primary-color);
-      text-shadow: 2px 2px 4px #0000;
+      text-shadow: 2px 2px 4px var(--shadow-color);
   
     }
 
@@ -192,7 +190,7 @@ const skills = [
   
     @media screen and (min-width: 700px) {
       .details {
-        color: rgba(171, 207, 141, 0.514)248, 0.514);
+        color: var(--name-color);
         line-height: 1.3rem;
         font-size: 1rem;
         font-weight: bold;

@@ -1,9 +1,13 @@
 :root {
   --primary-color: #ffffff;
-  --secondary-color: #f5deb3;
+  --secondary-color: #fddda1;
   --accent-color: #7f9cf5;
   --nav-e-color: #004d4d;
   --background-load:  rgb(47, 57, 59);
+  --background-color: linear-gradient(135deg, #467592, #3a2927);
+  --name-color: rgb(197, 128, 128);
+  --hover-color: #224963;
+  --shadow-color:  #000000;
 }
 
 html {
@@ -15,7 +19,7 @@ html {
 body {
     margin: 20px;
     min-height: 100vh;
-    background: linear-gradient(135deg, #467592, #3a2927);
+    background: var(--background-color);
     color: var(--primary-color);
   }
 
@@ -34,7 +38,7 @@ body {
   
   .loader {
     border: 8px solid var(--primary-color);
-    border-top: 8px solid #3498db;
+    border-top: 8px solid var(--accent-color);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -123,11 +127,13 @@ h1{
 }
 
 .name {
-  color: rgb(197, 128, 128);
+  color: var(--name-color);
   font-weight: bold;
   font-size: 3rem;
 }
 #contactForm {
+  display: flex;
+  flex-direction: column;
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
@@ -141,7 +147,7 @@ h1{
   margin: 30px auto; 
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px var(--name-color);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -229,7 +235,7 @@ button:hover {
   body {
     margin: 0 80px;
     min-height: 100vh;
-    background: linear-gradient(135deg, #467592, #3a2927);
+    background: var(--background-color);
     color: var(--primary-color);
   }
 
@@ -247,11 +253,10 @@ button:hover {
 
   h1 {
       font-size: 2.5em;
-      color: rgb(81, 72, 100);
+      color: var(--hover-color);
       text-align: center;
       margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-      background: linear-gradient(45deg, #7e41ff, #00c7ff);
+      text-shadow: 2px 2px 4px var(--shadow-color);
       -webkit-background-clip: text;
       color: transparent;
   }
@@ -270,7 +275,7 @@ button:hover {
   }
 
   .intro-section:hover {
-      background-color: #224963;
+      background-color: var(--hover-color);
   }
 
   .contact-details {

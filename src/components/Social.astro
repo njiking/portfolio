@@ -1,7 +1,21 @@
 ---
 const { platform, username } = Astro.props;
+
+const platformImages = {
+  github: '/github.png',
+  linkedin: '/linkedin.png',
+};
 ---
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+
+<a href={`https://www.${platform}.com/${username}`}>
+  <img src={platformImages[platform]} alt={`${platform} logo`} />
+
+  {platform}
+</a>
+
+
+
+
 
 <style>
     a {
@@ -21,19 +35,3 @@ const { platform, username } = Astro.props;
 
 
 
-<!--
-const { platform, username } = Astro.props;
-
-const platformImages = {
-  github: '/github.png',
-  linkedin: '/linkedin.png',
-};
--->
-
-<!--
-<a href={`https://www.${platform}.com/${username}`}>
-  <img src={platformImages[platform]} alt={`${platform} logo`} />
-
-  {platform}
-</a>
--->
