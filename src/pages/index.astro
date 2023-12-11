@@ -5,7 +5,7 @@ const pageTitle = " WELCOME";
 const identity = {
   firstName: "Nji kingsley Awah",
   country: "Poland",
-  occupation: "Front end web developer",
+  occupation: "Front-end developer",
   hobbies: ["Football", "Music"],
 };
 
@@ -142,7 +142,7 @@ const skills = [
   
       .container-links{
         display: block;
-        margin-left: 44px;
+        text-align: center;
       }
       
       .details-map{
@@ -164,7 +164,6 @@ const skills = [
       border-radius: 8px;
       box-shadow: 0 0 10px var(--background-load);
       max-height: 300px;
-      width: 147px;
       text-decoration: none;
       text-align: center;
       text-shadow: 2px 2px 4px var(--shadow-color);
@@ -215,7 +214,6 @@ const skills = [
       
       <div class="container-1">
         <h2>Learn about me  and my journey</h2>
-        <p>My name is {identity.firstName}.</p>
         <p>I live in {identity.country} and I work as a {identity.occupation}.</p>
         {
           identity.hobbies.length >= 2 && (
@@ -244,6 +242,7 @@ const skills = [
             </div>
         ))}      
         </ul>
+
         
       </div>
     </div>
@@ -267,6 +266,11 @@ const skills = [
                 <img class="container-image" src="/quotes.png" alt="Quote-generator site ima" width="300" height="250">
                  <a class="container-links" href="https://quotes-generater.vercel.app/">Quotes Generator</a>
                 </div>
+
+                <div>
+                  <img class="container-image" src="/password.png" alt="password-generator site image" width="450" height="350">
+                   <a class="container-links" href="https://king-password-gen87.vercel.app/">Password Generator</a>
+                  </div>
             </div>
      
           </div>
