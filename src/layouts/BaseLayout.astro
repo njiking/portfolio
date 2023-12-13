@@ -14,14 +14,13 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-
   <body>
     <div class="loading-screen">
       <div class="loader"></div>
     </div> 
     <Header />
     <main>
-      <img class="welcome" src="/welcome.svg" alt="welcome">
+      <img class="welcome m-0" src="/welcome.svg" alt="welcome">
       <slot />
     </main>
     <Footer />
