@@ -10,39 +10,36 @@ const identity = {
 };
 
 const skills = [
-    {
-      
-        name: 'HTML',
-        icon: '/html-5.png'
-    },
+  {
+    name: "HTML",
+    icon: "/html-5.png",
+  },
 
-    {
-        name: 'CSS',
-        icon: '/css.png'
-    
-    },
+  {
+    name: "CSS",
+    icon: "/css.png",
+  },
 
-    {
-        name: 'JavaScript',
-        icon: '/js.png'
-    },
+  {
+    name: "JavaScript",
+    icon: "/js.png",
+  },
 
-    {
-        name: 'Node.js',
-        icon: '/nodejs.png'
-    },
+  {
+    name: "Node.js",
+    icon: "/nodejs.png",
+  },
 
-    {
-        name: 'Astro',
-        icon: '/astro.png'
-    },
+  {
+    name: "Astro",
+    icon: "/astro.png",
+  },
 
-    {
-        name: 'Ubuntu',
-        icon: '/ubuntu.png'
-    }
+  {
+    name: "Ubuntu",
+    icon: "/ubuntu.png",
+  },
 ];
-
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -57,13 +54,12 @@ const skills = [
     </section>
   </div>
 
-
   <style>
     h1 {
       color: var(--secondary-color);
       font-size: 2.5rem;
     }
-  
+
     h2 {
       display: flex;
       justify-content: center;
@@ -72,13 +68,12 @@ const skills = [
       text-transform: uppercase;
     }
 
-  
     .container {
       display: block;
       gap: 5px;
       align-items: center;
     }
-  
+
     .container-1 {
       flex: 1;
       overflow: auto;
@@ -99,67 +94,65 @@ const skills = [
       background: var(--box-back);
       box-shadow: var(--box-shadow);
     }
-  
+
     .container-parent {
       display: flex;
-     flex-direction: row; 
-     min-height: 70vh;
-     }
-  
+      flex-direction: row;
+      min-height: 70vh;
+    }
+
     .container-4 {
       flex-wrap: wrap;
-      flex: 1; 
-      margin: 55px; 
+      flex: 1;
+      margin: 55px;
       color: var(--primary-color);
     }
-  
-    .pointer{
+
+    .pointer {
       display: flex;
       justify-content: center;
-     }
+    }
 
-    .container-p{
+    .container-p {
       display: flex;
-        justify-content: center;
-  }
-    
-    .container-projects{
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        flex-wrap: wrap;
-      }
-  
-      .container-image {
-        width: 250px;
-        height: 250px;
-        overflow: hidden;
-        border-radius: 16px;
-        transition: transform 0.3s ease;
-        border-radius: 40px;
+      justify-content: center;
+    }
 
-      }
-  
-      .container-image:hover {
-        transform: scale(1.1);
-      }
-  
-      .container-links{
-        display: block;
-        text-align: center;
-      }
-      
-      .details-map{
+    .container-projects {
       display: flex;
+      justify-content: center;
       gap: 25px;
-      flex: 1 1 45%;  
+      flex-wrap: wrap;
+    }
+
+    .container-image {
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 16px;
+      transition: transform 0.3s ease;
+      border-radius: 40px;
+    }
+
+    .container-image:hover {
+      transform: scale(1.1);
+    }
+
+    .container-links {
+      display: block;
+      text-align: center;
+    }
+
+    .details-map {
+      display: flex;
+      gap: 57px;
+      flex: 1 1 45%;
       flex-wrap: wrap;
       padding: 10px;
       box-sizing: border-box;
-      }
-  
-      
-    a{ 
+    }
+
+    a {
       color: var(--primary-color);
       margin: 5px;
       font-size: 16px;
@@ -173,24 +166,29 @@ const skills = [
       text-shadow: 2px 2px 4px var(--shadow-color);
     }
 
-    a:hover{
-      background-color: var(--accent-color);
-      box-shadow: var(--name-color);
+    a:hover {
+      background-color: var(--secondary-color);
       color: var(--primary-color);
-      text-shadow: 2px 2px 4px var(--shadow-color);
-  
     }
 
-
-    .phone{
-    background: none;
-    box-shadow: none;
+    .skill-icon {
+      display: block;
     }
-    .phone:hover{
+
+    .phone {
       background: none;
       box-shadow: none;
     }
-  
+
+    .phone:hover {
+      background: none;
+      box-shadow: none;
+    }
+    .phone-img:hover {
+      background-color: var(--secondary-color);
+      border-radius: 50%;
+    }
+
     @media screen and (min-width: 700px) {
       .details {
         color: var(--name-color);
@@ -200,24 +198,33 @@ const skills = [
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
       }
-     
-     .container{
-      display: flex;
-     }
 
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container-3 {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 15px;
+        border-radius: 8px;
+        text-shadow: 2px 2px 4px var(--shadow-color);
+        background: var(--box-back);
+        box-shadow: var(--box-shadow);
+      }
+     
     }
   </style>
 
-  <div class="pointer">
-    <h1>About me</h1> <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/4bf20032-b26c-423e-86d7-43834f8bd62c/MBD0U4Cbqx.json" background="transparent" speed="1" style="width: 150px; height: 150px" direction="1" mode="bounce" loop autoplay></dotlottie-player>
-  </div>
-
-  
-
+  <div id="about">
+    <div class="pointer mt-1">
+      <h1>About me</h1>
+    </div>
     <div class="container">
-      
       <div class="container-1">
-        <h2>Learn about me  and my journey</h2>
+        <h2>Learn about me and my journey</h2>
         <p>I live in {identity.country} and I work as a {identity.occupation}.</p>
         {
           identity.hobbies.length >= 2 && (
@@ -227,111 +234,178 @@ const skills = [
             </p>
           )
         }
-    
         <p class="details">Here are a few facts about me:</p>
         <p>
-          👋 Hi, I love crafting user-friendly and
-          visually appealing websites. 🚀 Embracing a new
-          life, I bring resilience and a fresh perspective to my work💡.
+          👋 I love crafting user-friendly and visually appealing websites. 🚀
+          Embracing a new life, I bring resilience and a fresh perspective to my
+          work💡.
         </p>
-
       </div>
- <div class="container-3">
+      <div class="container-3">
         <h2>skills</h2>
         <ul class="details-map">
-          {skills.map((skill, index) => (
-            <div key={index}>
+          {
+            skills.map((skill, index) => (
+              <div>
+                <img class="skill-icon" src={skill.icon} alt="images of icons" />
                 <span>{skill.name}</span>
-                <img src={skill.icon} alt='images of icons' />
-            </div>
-        ))}      
+              </div>
+            ))
+          }
         </ul>
-
-        
       </div>
     </div>
-  
-   <div id="projects">
-     <div class="container-parent">
-       <div class="container-4">
-            <h1>Projects</h1>
-            <p class="container-p">Check out some projects that I have worked on.</p>
-            <div class="container-projects">
+  </div>
 
-            <div>
-              <img class="container-image" src="/Astro blog.png" alt="first Astro blog image" width="300" height="250">
-               <a class="container-links" href="https://learn-astro-l1i519heh-njiking.vercel.app/">first Astro site</a>
-              </div>
-             <div>
-              <img class="container-image" src="/ttt.png" alt="tic tac toe game image" width="250" height="250">
-             <a class="container-links" href="https://tictactoe-njiking.vercel.app/">tic tac toe game</a>
-            </div>     
-              <div>
-                <img class="container-image" src="/quotes.png" alt="Quote-generator site ima" width="300" height="250">
-                 <a class="container-links" href="https://quotes-generater.vercel.app/">Quotes Generator</a>
-                </div>
-
-                <div>
-                  <img class="container-image" src="/password.png" alt="password-generator site image" width="450" height="350">
-                   <a class="container-links" href="https://king-password-gen87.vercel.app/">Password Generator</a>
-                  </div>
-            </div>
-     
+  <div id="projects">
+    <div class="container-parent">
+      <div class="container-4">
+        <h1>Projects</h1>
+        <p class="container-p">
+          Check out some projects that I have worked on.
+        </p>
+        <div class="container-projects">
+          <div>
+            <img
+              class="container-image"
+              src="/Astro blog.png"
+              alt="first Astro blog image"
+              width="300"
+              height="250"
+            />
+            <a
+              class="container-links"
+              href="https://learn-astro-l1i519heh-njiking.vercel.app/"
+              >First astro site</a
+            >
           </div>
-     </div>
-   </div>
+          <div>
+            <img
+              class="container-image"
+              src="/ttt.png"
+              alt="tic tac toe game image"
+              width="250"
+              height="250"
+            />
+            <a
+              class="container-links"
+              href="https://tictactoe-njiking.vercel.app/">Tic tac toe game</a
+            >
+          </div>
+          <div>
+            <img
+              class="container-image"
+              src="/quotes.png"
+              alt="Quote-generator site ima"
+              width="300"
+              height="250"
+            />
+            <a
+              class="container-links"
+              href="https://quotes-generater.vercel.app/">Quotes generator</a
+            >
+          </div>
 
-   <div id="contact">
-    <h1>Get In Touch</h1>
-     <div class="contact p-2 m-4">
+          <div>
+            <img
+              class="container-image"
+              src="/password.png"
+              alt="password-generator site image"
+              width="450"
+              height="350"
+            />
+            <a
+              class="container-links"
+              href="https://king-password-gen87.vercel.app/"
+              >Password generator</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact">
+    <h1>Get in touch</h1>
+    <div class="contact p-2 m-4">
       <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-        <form id="contactForm" class="space-y-4" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="7bc36f12-ba62-468a-bb0c-efda026c5e61">
-         
+        <form
+          id="contactForm"
+          class="space-y-4"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="7bc36f12-ba62-468a-bb0c-efda026c5e61"
+          />
+
           <div class="input-details">
             <label for="name" class="text-gray-700">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
+            />
           </div>
 
           <div class="input-details">
             <label for="email" class="text-gray-700">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
+            />
           </div>
 
           <div class="input-details">
             <label for="phone" class="text-gray-700">Phone</label>
-            <input type="text" id="phone" name="phone" placeholder="(123) 456-7890" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="(123) 456-7890"
+              class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
+            />
           </div>
 
           <div class="input-details">
-            <label for="text" class="text-gray-700">message</label>
-            <input type="text" id="phone" name="phone" placeholder="Message" class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500">
+            <label for="text" class="text-gray-700">Message</label>
+            <input
+              type="text"
+              id="text"
+              name="message"
+              placeholder="Message"
+              class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
+            />
           </div>
 
           <div class="submit mt-0 p-5">
-            <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+            <button
+              type="submit"
+              class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
               Submit Form
             </button>
           </div>
         </form>
       </div>
-     </div>
-   </div>
+    </div>
+  </div>
 
-
-<section class="contact-details">
-  <h2>Contact Details</h2>
-  <p>Feel free to reach out through any of the following:</p>
+  <section class="contact-details">
+    <h2>Contact Details</h2>
+    <p>Feel free to reach out through any of the following:</p>
     <div class="tell">
       <a class="phone" href="tel:+48698168694">
-      <img src="/phone.png" alt="Call me">
-        </a>
+        <img class="phone-img" src="/phone.png" alt="Call me" />
+      </a>
     </div>
-</section>
+  </section>
 
-<button id="scrollUpBtn">
-  <img src="/up.png" alt="Scroll Up"></button>
-
+  <button id="scrollUpBtn"><img src="/up.png" alt="Scroll Up" /></button>
 </BaseLayout>
-
-
