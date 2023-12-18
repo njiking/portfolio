@@ -77,9 +77,7 @@ const skills = [
     .container-1 {
       flex: 1;
       overflow: auto;
-      margin: 10px;
       color: var(--primary-color);
-      padding: 15px;
       border-radius: 15px;
       text-shadow: 2px 2px 4px var(--shadow-color);
       background: var(--box-back);
@@ -87,8 +85,6 @@ const skills = [
     }
     .container-3 {
       flex: 1;
-      margin: 0;
-      padding: 15px;
       border-radius: 8px;
       text-shadow: 2px 2px 4px var(--shadow-color);
       background: var(--box-back);
@@ -104,7 +100,6 @@ const skills = [
     .container-4 {
       flex-wrap: wrap;
       flex: 1;
-      margin: 55px;
       color: var(--primary-color);
     }
 
@@ -154,7 +149,6 @@ const skills = [
 
     a {
       color: var(--primary-color);
-      margin: 5px;
       font-size: 16px;
       padding: 10px;
       background-color: var(--accent-color);
@@ -207,8 +201,6 @@ const skills = [
       .container-3 {
         display: flex;
         flex-direction: column;
-        margin: 0;
-        padding: 15px;
         border-radius: 8px;
         text-shadow: 2px 2px 4px var(--shadow-color);
         background: var(--box-back);
@@ -223,7 +215,7 @@ const skills = [
       <h1>About me</h1>
     </div>
     <div class="container">
-      <div class="container-1">
+      <div class="container-1 m-5 p7-1">
         <h2>Learn about me and my journey</h2>
         <p>I live in {identity.country} and I work as a {identity.occupation}.</p>
         {
@@ -241,7 +233,7 @@ const skills = [
           work💡.
         </p>
       </div>
-      <div class="container-3">
+      <div class="container-3 mt-2 m-6 p7-1">
         <h2>skills</h2>
         <ul class="details-map">
           {
@@ -259,7 +251,7 @@ const skills = [
 
   <div id="projects">
     <div class="container-parent">
-      <div class="container-4">
+      <div class="container-4 m-8">
         <h1>Projects</h1>
         <p class="container-p">
           Check out some projects that I have worked on.
@@ -348,7 +340,7 @@ const skills = [
               id="name"
               name="name"
               placeholder="Your Name"
-              class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
+              class="mt-1 mb-2 p-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
             />
           </div>
 
@@ -359,7 +351,7 @@ const skills = [
               id="email"
               name="email"
               placeholder="Your Email"
-              class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
+              class="mt-1 mb-2 p-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
             />
           </div>
 
@@ -370,7 +362,7 @@ const skills = [
               id="phone"
               name="phone"
               placeholder="(123) 456-7890"
-              class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
+              class="mt-1 mb-2 p-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
             />
           </div>
 
@@ -381,14 +373,14 @@ const skills = [
               id="text"
               name="message"
               placeholder="Message"
-              class="mt-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
+              class="mt-1 mb-2 p-1 block w-full border-b border-gray-100 shadow-sm py-1 focus:outline-none focus:border-blue-500"
             />
           </div>
 
           <div class="submit mt-0 p-5">
             <button
               type="submit"
-              class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+              class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 p-6">
               Submit Form
             </button>
           </div>
@@ -397,10 +389,10 @@ const skills = [
     </div>
   </div>
 
-  <section class="contact-details">
+  <section class="contact-details pb-3">
     <h2>Contact Details</h2>
     <p>Feel free to reach out through any of the following:</p>
-    <div class="tell">
+    <div class="tell m-6">
       <a class="phone" href="tel:+48698168694">
         <img class="phone-img" src="/phone.png" alt="Call me" />
       </a>

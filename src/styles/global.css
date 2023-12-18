@@ -15,7 +15,7 @@
 }
 
 .m-0 {
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .m-1 {
@@ -34,6 +34,21 @@
   margin: 30px auto;
 }
 
+.m-5 {
+  margin: 10px;
+}
+
+.m-6 {
+  margin: 0;
+}
+.m-7 {
+  margin: 5px;
+}
+
+.m-8 {
+  margin: 55px;
+}
+
 .mt-0 {
   margin-top: 5px;
 }
@@ -41,9 +56,18 @@
 .mt-1 {
   margin-top: 20px;
 }
+.mt-2 {
+  margin-top: 25px;
+}
+.mb-1 {
+margin-bottom: 20px;
+}
+.mt-3 {
+  margin-top: 50px;
+}
 
 .mb-2 {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .mr-1 {
@@ -62,9 +86,6 @@
   padding: 20px;
 }
 
-.p-3 {
-  padding: 20px auto;
-}
 
 .p-4 {
   padding: 30px;
@@ -74,12 +95,24 @@
   padding: 10px 15px;
 }
 
+.p-6 {
+  padding: 5px 7.5px;
+}
+
+.p7-1 {
+  padding: 15px;
+}
+
 .pt-1 {
   padding-top: 15px;
 }
 
 .pb-2 {
   padding-bottom: 20px;
+}
+
+.pb-3 {
+  padding-bottom: 5px;
 }
 
 .pl-1 {
@@ -140,13 +173,11 @@ body {
 .welcome {
   width: 170px;
   display: block;
-  margin-top: 20px;
 }
 
 
 .hamburger {
   cursor: pointer;
-  margin-top: 25px;
   /* NOTES: right align hamburger icon and give it a fixed width and height */
   width: 50px;
   height: 50px;
@@ -159,7 +190,6 @@ body {
 .hamburger .line {
   display: block;
   width: 50px;
-  margin: 9px auto;
   height: 5px;
   background-color: var(--primary-color);
   /* NOTES: reduce the animation duration and animation opacity property for the second line */
@@ -237,8 +267,6 @@ h1 {
 input,
 textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
   border: 1px solid var(--primary-color);
   border-radius: 4px;
   box-sizing: border-box;
@@ -286,7 +314,6 @@ label {
 input,
 textarea {
   width: 50%;
-  padding: 5px;
   box-sizing: border-box;
   border: 0.5px solid var(--nav-e-color);
   border-radius: 4px;
@@ -295,7 +322,6 @@ textarea {
 button {
   background-color: var(--accent-color);
   color: var(--primary-color);
-  padding: 5px 7.5px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -327,7 +353,6 @@ button {
   .welcome {
     width: 250px;
     display: block;
-    margin-top: 50px;
   }
 
 
@@ -361,11 +386,9 @@ button {
   .contact-details {
     display: flex;
     flex-direction: column;
-    padding-bottom: 5px;
   }
 
   .tell {
-    margin: 0;
     color: var(--primary-color);
     font-size: 1rem;
     line-height: 1.5em;
@@ -388,7 +411,6 @@ button {
   input,
   textarea {
     width: 100%;
-    padding: 10px;
     box-sizing: border-box;
     border: 0.5px solid var(--secondary-color);
     border-radius: 4px;
@@ -399,7 +421,6 @@ button {
   button {
     background-color: var(--accent-color);
     color: var(--primary-color);
-    padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
