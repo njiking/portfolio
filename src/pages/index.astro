@@ -44,14 +44,21 @@ const skills = [
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="container-box">
-    <section class="intro-section p-4 ml-2">
+    <div class="intro-section p-4 ml-2">
       <p class="hi">Hi, I'm <span class="name">Kingsley</span></p>
       <h3 class="hi">front-end developer</h3>
       <h4>WELCOME TO MY SPACE</h4>
-       I am passionate about web development, I've mastered HTML, CSS, and
-      JavaScript through hands-on learning. My journey includes exploring
-      responsive design and modern frameworks.
-    </section>
+       <p class="intro-p">
+         I am passionate about web development, I've mastered HTML, CSS, and
+               JavaScript through hands-on learning. My journey includes exploring
+               responsive design and modern frameworks.
+       </p>      
+       
+    </div>
+<div class="me">
+        <img src="/pic.png" alt="my pic">
+      </div>
+      
   </div>
 
   <style>
@@ -65,7 +72,6 @@ const skills = [
       justify-content: center;
       font-size: 1rem;
       color: var(--secondary-color);
-      text-transform: uppercase;
     }
 
     .container {
@@ -124,7 +130,6 @@ const skills = [
       width: 250px;
       height: 250px;
       overflow: hidden;
-      border-radius: 16px;
       transition: transform 0.3s ease;
       border-radius: 40px;
     }
@@ -133,11 +138,20 @@ const skills = [
       transform: scale(1.1);
     }
 
+    .image-name {
+      display: block;
+      color: var(--box-shadow);
+      font-size: 18px;
+     background-color: var(--accent-color);
+     border-radius: 10px;
+     }
+
+
     .container-links {
       display: block;
       text-align: center;
     }
-
+    
     .details-map {
       display: flex;
       gap: 57px;
@@ -151,18 +165,11 @@ const skills = [
       color: var(--primary-color);
       font-size: 16px;
       padding: 10px;
-      background-color: var(--accent-color);
       border-radius: 8px;
-      box-shadow: 0 0 10px var(--background-load);
       max-height: 300px;
       text-decoration: none;
       text-align: center;
       text-shadow: 2px 2px 4px var(--shadow-color);
-    }
-
-    a:hover {
-      background-color: var(--secondary-color);
-      color: var(--primary-color);
     }
 
     .skill-icon {
@@ -193,10 +200,42 @@ const skills = [
           sans-serif;
       }
 
-      .container {
+      .container{
         display: flex;
         flex-direction: column;
       }
+
+      .container-link {
+  text-decoration: none;
+}
+
+.container-image {
+  display: block;
+  position: relative;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.container-image:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-name {
+  color: var(--shadow-color);
+  font-size: 18px;
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  padding: 10px; /* Add padding for better visibility */
+}
 
       .container-3 {
         display: flex;
@@ -257,61 +296,73 @@ const skills = [
           Check out some projects that I have worked on.
         </p>
         <div class="container-projects">
-          <div>
-            <img
-              class="container-image"
-              src="/Astro blog.png"
-              alt="first Astro blog image"
-              width="300"
-              height="250"
-            />
-            <a
-              class="container-links"
-              href="https://learn-astro-l1i519heh-njiking.vercel.app/"
-              >First astro site</a
-            >
-          </div>
-          <div>
-            <img
-              class="container-image"
-              src="/ttt.png"
-              alt="tic tac toe game image"
-              width="250"
-              height="250"
-            />
-            <a
-              class="container-links"
-              href="https://tictactoe-njiking.vercel.app/">Tic tac toe game</a
-            >
-          </div>
-          <div>
-            <img
-              class="container-image"
-              src="/quotes.png"
-              alt="Quote-generator site ima"
-              width="300"
-              height="250"
-            />
-            <a
-              class="container-links"
-              href="https://quotes-generater.vercel.app/">Quotes generator</a
-            >
+          
+          <div class="container-hover">
+            <a href="https://learn-astro-l1i519heh-njiking.vercel.app/" class="container-link">
+              <img
+                class="container-image"
+                src="/Astro blog.png"
+                alt="first Astro blog image"
+                width="300"
+                height="250"
+              />
+              <div class="image-overlay">
+                <p class="image-name p-3">First Astro site</p>
+              </div>
+            </a>
           </div>
 
-          <div>
-            <img
-              class="container-image"
-              src="/password.png"
-              alt="password-generator site image"
-              width="450"
-              height="350"
-            />
-            <a
-              class="container-links"
-              href="https://king-password-gen87.vercel.app/"
-              >Password generator</a
-            >
+
+          <div class="container-hover">
+            <a href="https://tictactoe-njiking.vercel.app/" class="container-link">
+              <img
+                class="container-image"
+                src="/ttt.png"
+                alt="tic tac toe game image"
+                width="250"
+                height="250"
+              />
+              <div class="image-overlay">
+                <p class="image-name p-3">Tic tac toe game</p>
+              </div>
+            </a>
           </div>
+
+
+          <div class="container-hover">
+            <a href="https://quotes-generater.vercel.app/" class="container-link">
+              <img
+                class="container-image"
+                src="/quotes.png"
+                alt="Quote-generator site image"
+                width="300"
+                height="250"
+              />
+              <div class="image-overlay">
+                <p class="image-name p-3">Quotes generator</p>
+              </div>
+            </a>
+          </div>
+          
+
+          <div class="container-hover">
+            <a href="https://king-password-gen87.vercel.app/" class="container-link">
+              <img
+                class="container-image"
+                src="/password.png"
+                alt="password-generator site image"
+                width="450"
+                height="350"
+              />
+              <div class="image-overlay">
+                <p class="image-name p-3">Password generator</p>
+              </div>
+            </a>
+          </div>
+
+
+
+          
         </div>
       </div>
     </div>
