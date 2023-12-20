@@ -44,7 +44,7 @@
           transform 0.2s ease-out;
         color: var(--primary-color);
         border-radius: 10px;
-        z-index: 1;
+        
       }
       .navbuttons a {
         color: var(--primary-color);
@@ -90,8 +90,9 @@
           top: 0;
           left: 50%;
           transform: translateX(-50%);
-          background-color: #dbdbdb;
-          box-shadow: 0px 2px 5px #868686;
+          background-color: var(--back-c);
+          box-shadow: 0px 2px 5px var(--name-color);
+          z-index: 5;
         }
 
         .navbar p {
@@ -173,7 +174,7 @@
           max-width: 80px;
           height: auto;
           border-radius: 10px;
-          z-index: 1;
+          z-index: 6;
           position: fixed;
           top: 0;
         }

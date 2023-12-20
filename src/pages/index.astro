@@ -55,7 +55,7 @@ const skills = [
        </p>      
        
     </div>
-<div class="me">
+      <div class="me">
         <img src="/pic.png" alt="my pic">
       </div>
       
@@ -134,19 +134,6 @@ const skills = [
       border-radius: 40px;
     }
 
-    .container-image:hover {
-      transform: scale(1.1);
-    }
-
-    .image-name {
-      display: block;
-      color: var(--box-shadow);
-      font-size: 18px;
-     background-color: var(--accent-color);
-     border-radius: 10px;
-     }
-
-
     .container-links {
       display: block;
       text-align: center;
@@ -171,6 +158,11 @@ const skills = [
       text-align: center;
       text-shadow: 2px 2px 4px var(--shadow-color);
     }
+    .image-overlay{
+      background-color: var(--accent-color);
+      border-radius: 25px;
+    }
+    
 
     .skill-icon {
       display: block;
@@ -205,37 +197,59 @@ const skills = [
         flex-direction: column;
       }
 
+
+    .container-image {
+      display: block;
+      position: relative;
+        }
+      
+          .container-hover {
+          position: relative;
+          display: inline-block; /* To maintain the image size */
+          
+           }
+
+        .container-hover .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        background-color: var(--effect-h); /* Adjust the transparency as needed */
+        transition: opacity 0.3s;
+        border-radius: 20px;
+          }
+
+        .container-hover:hover .image-overlay {
+        opacity: 1;
+          }
+
+      .container-hover:hover .container-image {
+        opacity: 0.5; /* Adjust the transparency as needed */
+        transform: scale(1.1);
+      }
+
       .container-link {
-  text-decoration: none;
-}
+        display: block;
+        overflow: hidden; /* Ensure the overlay doesn't extend beyond the image */
+      }
 
-.container-image {
-  display: block;
-  position: relative;
-}
+      .container-link img {
+        display: block;
+        transition: opacity 0.3s, transform 0.3s;
+      }
 
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.container-image:hover .image-overlay {
-  opacity: 1;
-}
-
-.image-name {
-  color: var(--shadow-color);
-  font-size: 18px;
-  background-color: var(--accent-color);
-  border-radius: 10px;
-  padding: 10px; /* Add padding for better visibility */
-}
+      .image-name {
+      font-size: 18px;
+      border-radius: 10px;
+      color: var(--primary-color); /* Adjust the text color as needed */
+      font-size: 16px; /* Adjust the font size as needed */
+      text-align: center;
+      }
 
       .container-3 {
         display: flex;
@@ -246,7 +260,7 @@ const skills = [
         box-shadow: var(--box-shadow);
       }
      
-    }
+  }
   </style>
 
   <div id="about">
@@ -306,8 +320,8 @@ const skills = [
                 width="300"
                 height="250"
               />
-              <div class="image-overlay">
-                <p class="image-name p-3">First Astro site</p>
+              <div class="image-overlay"> 
+                  <p class="image-name p-3">First Astro site</p>
               </div>
             </a>
           </div>
