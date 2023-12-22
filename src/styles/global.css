@@ -139,7 +139,7 @@ html {
 }
 
 body {
-  margin: 20px;
+  margin: 30px;
   min-height: 100vh;
   background: var(--background-color);
   color: var(--primary-color);
