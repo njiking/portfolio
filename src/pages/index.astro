@@ -48,14 +48,220 @@ const skills = [
       <p class="hi">Hi, I'm <span class="name">Kingsley</span></p>
       <h3 class="hi">front-end developer</h3>
       <h4>WELCOME TO MY SPACE</h4>
-      <p class="intro-p">
-        I am passionate about web development, I've mastered HTML, CSS, and JavaScript through hands-on learning. My journey includes exploring responsive design and modern frameworks.</p>
+       <p class="intro-p">
+         I am passionate about web development, I've mastered HTML, CSS, and
+               JavaScript through hands-on learning. My journey includes exploring
+               responsive design and modern frameworks.
+       </p>      
+       
     </div>
       <div class="me">
         <img src="/pic.png" alt="my pic">
       </div>
       
   </div>
+
+  <style>
+    h1 {
+      color: var(--secondary-color);
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      display: flex;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--secondary-color);
+    }
+
+    .container {
+      display: block;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .container-1 {
+      flex: 1;
+      overflow: auto;
+      color: var(--primary-color);
+      border-radius: 15px;
+      text-shadow: 2px 2px 4px var(--shadow-color);
+      background: var(--box-back);
+      box-shadow: var(--box-shadow);
+    }
+    .container-3 {
+      flex: 1;
+      border-radius: 8px;
+      text-shadow: 2px 2px 4px var(--shadow-color);
+      background: var(--box-back);
+      box-shadow: var(--box-shadow);
+    }
+
+    .container-parent {
+      display: flex;
+      flex-direction: row;
+      min-height: 70vh;
+    }
+
+    .container-4 {
+      flex-wrap: wrap;
+      flex: 1;
+      color: var(--primary-color);
+    }
+
+    .pointer {
+      display: flex;
+      justify-content: center;
+    }
+
+    .container-p {
+      display: flex;
+      justify-content: center;
+    }
+
+    .container-projects {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .container-image {
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      border-radius: 40px;
+    }
+
+    .container-links {
+      display: block;
+      text-align: center;
+    }
+    
+    .details-map {
+      display: flex;
+      gap: 57px;
+      flex: 1 1 45%;
+      flex-wrap: wrap;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    a {
+      color: var(--primary-color);
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 8px;
+      max-height: 300px;
+      text-decoration: none;
+      text-align: center;
+      text-shadow: 2px 2px 4px var(--shadow-color);
+    }
+    .image-overlay{
+      background-color: var(--accent-color);
+      border-radius: 25px;
+    }
+    
+
+    .skill-icon {
+      display: block;
+    }
+
+    .phone {
+      background: none;
+      box-shadow: none;
+    }
+
+    .phone:hover {
+      background: none;
+      box-shadow: none;
+    }
+    .phone-img:hover {
+      background-color: var(--secondary-color);
+      border-radius: 50%;
+    }
+
+    @media screen and (min-width: 700px) {
+      .details {
+        color: var(--name-color);
+        line-height: 1.3rem;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      .container{
+        display: flex;
+        flex-direction: column;
+      }
+
+
+    .container-image {
+      display: block;
+      position: relative;
+        }
+      
+          .container-hover {
+          position: relative;
+          display: inline-block; /* To maintain the image size */
+          
+           }
+
+        .container-hover .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        background-color: var(--effect-h); /* Adjust the transparency as needed */
+        transition: opacity 0.3s;
+        border-radius: 20px;
+          }
+
+        .container-hover:hover .image-overlay {
+        opacity: 1;
+          }
+
+      .container-hover:hover .container-image {
+        opacity: 0.5; /* Adjust the transparency as needed */
+        transform: scale(1.1);
+      }
+
+      .container-link {
+        display: block;
+        overflow: hidden; /* Ensure the overlay doesn't extend beyond the image */
+      }
+
+      .container-link img {
+        display: block;
+        transition: opacity 0.3s, transform 0.3s;
+      }
+
+      .image-name {
+      font-size: 18px;
+      border-radius: 10px;
+      color: var(--primary-color); /* Adjust the text color as needed */
+      font-size: 16px; /* Adjust the font size as needed */
+      text-align: center;
+      }
+
+      .container-3 {
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        text-shadow: 2px 2px 4px var(--shadow-color);
+        background: var(--box-back);
+        box-shadow: var(--box-shadow);
+      }
+     
+  }
+  </style>
 
   <div id="about">
     <div class="pointer mt-1">
@@ -260,205 +466,3 @@ const skills = [
 
   <button id="scrollUpBtn"><img src="/up.png" alt="Scroll Up" /></button>
 </BaseLayout>
-
-<style>
-  h1 {
-    color: var(--secondary-color);
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    display: flex;
-    justify-content: center;
-    font-size: 1rem;
-    color: var(--secondary-color);
-  }
-
-  .container {
-    display: block;
-    gap: 5px;
-    align-items: center;
-  }
-
-  .container-1 {
-    flex: 1;
-    overflow: auto;
-    color: var(--primary-color);
-    border-radius: 15px;
-    text-shadow: 2px 2px 4px var(--shadow-color);
-    background: var(--box-back);
-    box-shadow: var(--box-shadow);
-  }
-  .container-3 {
-    flex: 1;
-    border-radius: 8px;
-    text-shadow: 2px 2px 4px var(--shadow-color);
-    background: var(--box-back);
-    box-shadow: var(--box-shadow);
-  }
-
-  .container-parent {
-    display: flex;
-    flex-direction: row;
-    min-height: 70vh;
-  }
-
-  .container-4 {
-    flex-wrap: wrap;
-    flex: 1;
-    color: var(--primary-color);
-  }
-
-  .pointer {
-    display: flex;
-    justify-content: center;
-  }
-
-  .container-p {
-    display: flex;
-    justify-content: center;
-  }
-
-  .container-projects {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-  }
-
-  .container-image {
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    border-radius: 40px;
-  }
-
-  .container-links {
-    display: block;
-    text-align: center;
-  }
-  
-  .details-map {
-    display: flex;
-    gap: 57px;
-    flex: 1 1 45%;
-    flex-wrap: wrap;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  a {
-    color: var(--primary-color);
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 8px;
-    max-height: 300px;
-    text-decoration: none;
-    text-align: center;
-    text-shadow: 2px 2px 4px var(--shadow-color);
-  }
-  .image-overlay{
-    background-color: var(--accent-color);
-    border-radius: 25px;
-  }
-  
-
-  .skill-icon {
-    display: block;
-  }
-
-  .phone {
-    background: none;
-    box-shadow: none;
-  }
-
-  .phone:hover {
-    background: none;
-    box-shadow: none;
-  }
-  .phone-img:hover {
-    background-color: var(--secondary-color);
-    border-radius: 50%;
-  }
-
-  @media screen and (min-width: 700px) {
-    .details {
-      color: var(--name-color);
-      line-height: 1.3rem;
-      font-size: 1rem;
-      font-weight: bold;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-    }
-
-    .container{
-      display: flex;
-      flex-direction: column;
-    }
-
-
-  .container-image {
-    display: block;
-    position: relative;
-      }
-    
-        .container-hover {
-        position: relative;
-        display: inline-block; /* To maintain the image size */
-        
-        }
-
-      .container-hover .image-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      background-color: var(--effect-h); /* Adjust the transparency as needed */
-      transition: opacity 0.3s;
-      border-radius: 20px;
-        }
-
-      .container-hover:hover .image-overlay {
-      opacity: 1;
-        }
-
-    .container-hover:hover .container-image {
-      opacity: 0.5; /* Adjust the transparency as needed */
-      transform: scale(1.1);
-    }
-
-    .container-link {
-      display: block;
-      overflow: hidden; /* Ensure the overlay doesn't extend beyond the image */
-    }
-
-    .container-link img {
-      display: block;
-      transition: opacity 0.3s, transform 0.3s;
-    }
-
-    .image-name {
-    font-size: 18px;
-    border-radius: 10px;
-    color: var(--primary-color); /* Adjust the text color as needed */
-    font-size: 16px; /* Adjust the font size as needed */
-    text-align: center;
-    }
-
-    .container-3 {
-      display: flex;
-      flex-direction: column;
-      border-radius: 8px;
-      text-shadow: 2px 2px 4px var(--shadow-color);
-      background: var(--box-back);
-      box-shadow: var(--box-shadow);
-    }
-    
-}
-</style>

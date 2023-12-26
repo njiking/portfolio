@@ -12,8 +12,7 @@
     -33px -33px 66px #228599;
   --box-back: linear-gradient(145deg, #05161a, #196170);
   --effect-h: rgba(0, 0, 0, 0.7);
-  --back-c:#dbdbdb;
-  --max-width: 1480px;
+  --back-c:#dbdbdb
 }
 
 .m-0 {
@@ -236,63 +235,18 @@ h1 {
 .container-box {
   display: block;
   border-radius: 15px;
-  max-width: var(--max-width);
-  margin: auto;
 }
 
 .intro-section {
   display: flex;
   flex-direction: column;
-}
-
-.me {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
 }
 
 .me img {
-  max-width: 50%;
+  max-width: 55%;
   height: auto;
   border-radius: 15%;
-  animation: floatAnimation 3s ease-in-out infinite alternate; /* Floating animation */
-  transition: transform 0.5s ease-in-out; /* Smooth transition on hover */
-}
-
-.me:hover img {
-  transform: scale(1.1); /* Zoom in on hover */
-  animation: none; /* Stop the ongoing floating animation on hover */
-  z-index: 2; /* Set a higher z-index value on hover */
-}
-
-@keyframes floatAnimation {
-  0% {
-    transform: translateY(0); /* Initial position */
-  }
-  50% {
-    transform: translateY(-10px); /* Float up */
-  }
-  100% {
-    transform: translateY(0); /* Back to the initial position */
-  }
-}
-
-@keyframes moveAnimation {
-  0% {
-    transform: translate(0, 0); /* Initial position */
-  }
-  25% {
-    transform: translate(50px, -20px); /* Move diagonally up and right after 25% of the animation */
-  }
-  50% {
-    transform: translate(0, -40px); /* Move up after 50% of the animation */
-  }
-  75% {
-    transform: translate(-50px, -20px); /* Move diagonally up and left after 75% of the animation */
-  }
-  100% {
-    transform: translate(0, 0); /* Back to the initial position */
-  }
 }
 
 
@@ -430,14 +384,67 @@ button {
     color: transparent;
   }
 
+
   .container-box {
     display: flex;
     border-radius: 15px;
   }
 
-  .me {
-    justify-content: flex-end;
+  .intro-section {
+    flex: 1;
   }
+
+  .me {
+    max-width: 50%;
+    height: auto;
+    overflow: hidden; /* Ensure the image doesn't overflow its container */
+  }
+
+  .me img {
+    animation: floatAnimation 3s ease-in-out infinite alternate; /* Floating animation */
+    transition: transform 0.5s ease-in-out; /* Smooth transition on hover */
+    position: relative; /* Set the position to relative */
+    z-index: 1; /* Set a z-index value */
+    left: 30px;
+    top: 20px;
+  }
+  
+  .me:hover img {
+    transform: scale(1.1); /* Zoom in on hover */
+    animation: none; /* Stop the ongoing floating animation on hover */
+    z-index: 2; /* Set a higher z-index value on hover */
+  }
+  
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0); /* Initial position */
+    }
+    50% {
+      transform: translateY(-10px); /* Float up */
+    }
+    100% {
+      transform: translateY(0); /* Back to the initial position */
+    }
+  }
+  
+  @keyframes moveAnimation {
+    0% {
+      transform: translate(0, 0); /* Initial position */
+    }
+    25% {
+      transform: translate(50px, -20px); /* Move diagonally up and right after 25% of the animation */
+    }
+    50% {
+      transform: translate(0, -40px); /* Move up after 50% of the animation */
+    }
+    75% {
+      transform: translate(-50px, -20px); /* Move diagonally up and left after 75% of the animation */
+    }
+    100% {
+      transform: translate(0, 0); /* Back to the initial position */
+    }
+  }
+  
 
   .intro-section:hover {
     background-color: var(--hover-color);
