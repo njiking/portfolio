@@ -12,7 +12,8 @@
     -33px -33px 66px #228599;
   --box-back: linear-gradient(145deg, #05161a, #196170);
   --effect-h: rgba(0, 0, 0, 0.7);
-  --back-c:#dbdbdb
+  --back-c:#dbdbdb;
+  --max-width: 1480px;
 }
 
 .m-0 {
@@ -235,6 +236,8 @@ h1 {
 .container-box {
   display: block;
   border-radius: 15px;
+  max-width: var(--max-width);
+  margin: auto;
 }
 
 .intro-section {
